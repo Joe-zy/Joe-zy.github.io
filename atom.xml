@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Js·Racing</title>
+  <title>Joe-zy&#39;s Blog 爱，自由，共享</title>
   <subtitle>朱越的个人博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-29T14:25:59.462Z</updated>
+  <updated>2016-12-29T16:52:33.297Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm与nrm的一些基础操作命令</title>
+    <link href="http://yoursite.com/2015/02/02/NodeJs01/"/>
+    <id>http://yoursite.com/2015/02/02/NodeJs01/</id>
+    <published>2015-02-02T11:28:21.000Z</published>
+    <updated>2016-12-29T16:52:33.297Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;工欲善其事，必先利其器，要顺利使用NodeJs的各种模块包，我们就必须熟悉npm及其换源工具nrm的操作指令&lt;/p
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="后端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="NodeJs" scheme="http://yoursite.com/tags/NodeJs/"/>
+    
+      <category term="基础知识" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World!</title>

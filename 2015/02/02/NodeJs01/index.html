@@ -7,13 +7,18 @@
 
     
 
-    <title>归档 | 朱越的个人博客</title>
+    <title>npm与nrm的一些基础操作命令 | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="前言
+工欲善其事，必先利其器，要顺利使用NodeJs的各种模块包，我们就必须熟悉npm及其换源工具nrm的操作指令
+
+1.npm操作：npm init 初始化一个新的package.jsonnpm install 包名 安装模块npm install -g 全局安装模块npm install 包名称">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="npm与nrm的一些基础操作命令"/>
     <meta property="og:site_name" content="Joe-zy&#39;s Blog 爱，自由，共享"/>
 
     
@@ -223,46 +228,113 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/后端/">后端</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>npm与nrm的一些基础操作命令</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2015-02-02T11:28:21.000Z"><a href="/2015/02/02/NodeJs01/">2015-02-02</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/NodeJs/" class="chip pink lighten-1">NodeJs</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2015
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2015/02/02/NodeJs01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-02-02T11:28:21.000Z">2015-02-02</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                npm与nrm的一些基础操作命令
-                            </a>
-                        
-                            <a href="/2015/01/29/hello/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-01-29T03:16:12.000Z">2015-01-29</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World!
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/基础知识/" class="chip pink lighten-1">基础知识</a>
         
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#前言"><span class="section table-of-contents-text">前言</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-npm操作："><span class="section table-of-contents-text">1.npm操作：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-npm换源插件nrm的操作："><span class="section table-of-contents-text">2.npm换源插件nrm的操作：</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>工欲善其事，必先利其器，要顺利使用NodeJs的各种模块包，我们就必须熟悉npm及其换源工具nrm的操作指令</p>
+</blockquote>
+<h2 id="1-npm操作："><a href="#1-npm操作：" class="headerlink" title="1.npm操作："></a>1.npm操作：</h2><p><code>npm init</code> 初始化一个新的package.json<br><code>npm install 包名</code> 安装模块<br><code>npm install -g</code> 全局安装模块<br><code>npm install 包名称  --save-dev</code>  把当前安装的这个包自动添加到package.json的文件夹中<br><strong>注意：如果<code>npm install</code>后面没有给具体的包名称，就会默认去package.json下安装devDependencies下所有的包</strong><br><code>npm adduser 用户名</code> 登录npm<br><code>npm publish</code> 把当前路径的包发布到npm<br><strong>注意2：必须把源切换回npm才能登录和上传</strong><br><strong>注意3：如果包名字重合了，必须在package.json中修改name值再重新上传</strong></p>
+<h2 id="2-npm换源插件nrm的操作："><a href="#2-npm换源插件nrm的操作：" class="headerlink" title="2.npm换源插件nrm的操作："></a>2.npm换源插件nrm的操作：</h2><blockquote>
+<p>nrm很好地解决了国内使用npm官方源下载缓慢的问题，以下是它的常用使用命令</p>
+</blockquote>
+<p><code>npm install -g nrm</code> :安装nrm<br><code>nrm ls</code> ： 显示源列表，源名前有#号的是正在使用的源<br><code>nrm use 源名</code> ：使用该源<br><code>nrm test 源名</code> : 测试源响应时间</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2015/01/29/hello/" rel="next" title="Hello World!">
+    下一篇：Hello World!
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2015/02/02/NodeJs01/" data-title="npm与nrm的一些基础操作命令" data-url="http://yoursite.com/2015/02/02/NodeJs01/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'joe-zy'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>

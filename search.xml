@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[npm与nrm的一些基础操作命令]]></title>
+      <url>http://yoursite.com/2015/02/02/NodeJs01/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>工欲善其事，必先利其器，要顺利使用NodeJs的各种模块包，我们就必须熟悉npm及其换源工具nrm的操作指令</p>
+</blockquote>
+<h2 id="1-npm操作："><a href="#1-npm操作：" class="headerlink" title="1.npm操作："></a>1.npm操作：</h2><p><code>npm init</code> 初始化一个新的package.json<br><code>npm install 包名</code> 安装模块<br><code>npm install -g</code> 全局安装模块<br><code>npm install 包名称  --save-dev</code>  把当前安装的这个包自动添加到package.json的文件夹中<br><strong>注意：如果<code>npm install</code>后面没有给具体的包名称，就会默认去package.json下安装devDependencies下所有的包</strong><br><code>npm adduser 用户名</code> 登录npm<br><code>npm publish</code> 把当前路径的包发布到npm<br><strong>注意2：必须把源切换回npm才能登录和上传</strong><br><strong>注意3：如果包名字重合了，必须在package.json中修改name值再重新上传</strong></p>
+<h2 id="2-npm换源插件nrm的操作："><a href="#2-npm换源插件nrm的操作：" class="headerlink" title="2.npm换源插件nrm的操作："></a>2.npm换源插件nrm的操作：</h2><blockquote>
+<p>nrm很好地解决了国内使用npm官方源下载缓慢的问题，以下是它的常用使用命令</p>
+</blockquote>
+<p><code>npm install -g nrm</code> :安装nrm<br><code>nrm ls</code> ： 显示源列表，源名前有#号的是正在使用的源<br><code>nrm use 源名</code> ：使用该源<br><code>nrm test 源名</code> : 测试源响应时间</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World!]]></title>
       <url>http://yoursite.com/2015/01/29/hello/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -17,16 +31,16 @@
   
     
     <entry>
-      <title><![CDATA[关于]]></title>
-      <url>http://yoursite.com/about/index.html</url>
-      <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[读书]]></title>
       <url>http://yoursite.com/reading/index.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于]]></title>
+      <url>http://yoursite.com/about/index.html</url>
+      <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！<br>我搭建这个博客的目的在于记录我在学习编程技术过程中的收获、体会和总结，并分享给大家，如果我的文章对大家有一丝的帮助，我不胜荣幸。当然，偶尔也分享生活^.^</p>
+]]></content>
     </entry>
     
   
