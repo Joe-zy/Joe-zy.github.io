@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Js·Racing</title>
+  <subtitle>朱越的个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-12-29T14:25:59.462Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://yoursite.com/2015/01/29/hello/"/>
+    <id>http://yoursite.com/2015/01/29/hello/</id>
+    <published>2015-01-29T03:16:12.000Z</published>
+    <updated>2016-12-29T14:25:59.462Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;“起初,神创造天地”“地是空虚混沌，渊面黑暗； 神的灵运行在水面上”“神说：“要有光。”就有了光”“神看光是好的，就把光暗分开了”“神称光为“昼”，称暗为“夜”。有晚上，有早晨，这是头一日”(创1:1-1:5)。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="杂谈" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="首篇" scheme="http://yoursite.com/tags/%E9%A6%96%E7%AF%87/"/>
+    
+      <category term="谈论" scheme="http://yoursite.com/tags/%E8%B0%88%E8%AE%BA/"/>
+    
+  </entry>
+  
+</feed>

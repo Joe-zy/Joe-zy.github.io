@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Hello World!]]></title>
+      <url>http://yoursite.com/2015/01/29/hello/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>“起初,神创造天地”“地是空虚混沌，渊面黑暗； 神的灵运行在水面上”“神说：“要有光。”就有了光”“神看光是好的，就把光暗分开了”“神称光为“昼”，称暗为“夜”。有晚上，有早晨，这是头一日”(创1:1-1:5)。</p>
+</blockquote>
+<p>The first article.<br>一切的开端。</p>
+]]></content>
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title><![CDATA[关于]]></title>
+      <url>http://yoursite.com/about/index.html</url>
+      <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yoursite.com/reading/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+  
+</search>
