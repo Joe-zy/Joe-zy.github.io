@@ -41,7 +41,7 @@ html {
   color: rgba(0,0,0,0.8);
 }
 .container {
-  width: 700px;
+  width: 800px;
 }
 @media (max-width: 767px) {
   .container {
@@ -520,6 +520,10 @@ a.social-link {
 a.social-link:hover {
   color: #e0e0e0;
 }
+.header a.social-link {
+  margin-left: 22px;
+  margin-right: 18px;
+}
 .slider-image {
   border: none;
   border-radius: 0;
@@ -610,7 +614,7 @@ a.social-link:hover {
   position: fixed;
   top: 0px;
   margin-top: 15%;
-  left: calc(50% + 350px);
+  left: calc(50% + 400px);
 }
 .toc ol {
   list-style-type: none;
