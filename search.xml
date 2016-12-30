@@ -4,16 +4,45 @@
   
     
     <entry>
+      <title><![CDATA[对JavaScript中一些概念的理解（一）]]></title>
+      <url>http://yoursite.com/2015/02/27/JS01/</url>
+      <content type="html"><![CDATA[<h2 id="1-对面向对象的理解"><a href="#1-对面向对象的理解" class="headerlink" title="1.对面向对象的理解"></a>1.对面向对象的理解</h2><p> 首先，对象是对实际事物的一个抽象，它包括了属性和方法两个概念，比如对于一个人来说，他的属性有姓名、身高、年龄等等，方法有吃饭，走路，跑步等等。对于万物都可以看作一个对象。</p>
+<p> 在编程中主要分为<code>面向过程(pop)</code>和<code>面向对象(oop)</code>两大类，pop主要重视做事的过程，oop是关注参与者和他们的行为，形象一点说，比如我们在编写一段选项卡功能时，pop就是针对这一选项卡的功能来针对性地写代码，oop则是编写这一个选项卡对象，在编写难度上oop更高一些，但是它的特点在于可以复用代码，适合于模块化编写，一个页面中有多个选项卡都可以使用这一个对象，并为其增加个性化设置，而pop则需要根据不同选项卡进行多次代码编写，这也就是oop的好处。</p>
+<h2 id="2-json"><a href="#2-json" class="headerlink" title="2.json"></a>2.json</h2><p>json是js对象表示法，它的内容以键值对的方式存在，它的主要用途在于存储和交换信息，我们前端工作中主要利用json字符串与后台服务器数据库进行数据交换，它的优点在于它是轻量级文本数据交换格式，可被多种程序语言解读，比XML更小更快更易解析，也天生是一个js对象。</p>
+<p><strong>注意：json字符串中键名必须以双引号包裹，否则会在识别时出错</strong></p>
+<h2 id="3-原型prototype"><a href="#3-原型prototype" class="headerlink" title="3.原型prototype"></a>3.原型prototype</h2><p>JS中各种类型的对象都有一个prototype属性，这个属性本身是一个object类型的对象，它包含了很多属性与方法，同时我们也可以为不同类型对象的prototype属性添加特定的属性与方法，如通过:<code>构造函数.prototype.方法 = function(){}</code>;</p>
+<p><strong>注意：若在window.onload中对一些对象调用原型中的方法，但是这些方法是在这些代码下方设置的，就会报错。可以将这些设置prototype方法的代码写在window.onload外部或者写在内部的上方。</strong></p>
+<h2 id="4-编译原理"><a href="#4-编译原理" class="headerlink" title="4.编译原理"></a>4.编译原理</h2><p>浏览器在解读JS代码时有一个顺序，首先会进行一次预编译，通过对var function等关键字的查询，找到变量或者函数，放到一个仓库中，变量先为其设置undefined为初始值，函数就存一个空的代码块，然后再逐行执行代码。</p>
+<p><strong>注意：在逐行执行代码时，遇到赋值的时候会根据变量名对存在仓库中的变量或函数进行赋值，但是如果遇到变量与函数同名，则会用函数内容覆盖变量内容，如果遇到有同名的函数，就会用后载入的函数覆盖先载入的的。</strong></p>
+<h2 id="5-递归函数"><a href="#5-递归函数" class="headerlink" title="5.递归函数"></a>5.递归函数</h2><p>简单来说，递归函数就是在函数中调用自身这个函数，递归必须有入口和出口，就是说什么时候调用自己，什么时候不调用，否则会形成死循环，递归主要用在解决树状结构类似问题，如读取文件目录，货品分类树等。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[NodeJs中的Buffer类]]></title>
+      <url>http://yoursite.com/2015/02/16/NodeJs02/</url>
+      <content type="html"><![CDATA[<h3 id="1-Buffer-是什么"><a href="#1-Buffer-是什么" class="headerlink" title="1 Buffer 是什么?"></a>1 Buffer 是什么?</h3><p>所谓缓冲区Buffer，就是 “临时存贮区” 的意思，是暂时存放输入输出数据的一段内存。</p>
+<p>JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作。</p>
+<h3 id="2-Buffer-怎样用？"><a href="#2-Buffer-怎样用？" class="headerlink" title="2 Buffer 怎样用？"></a>2 Buffer 怎样用？</h3><p>Buffer的形式类似于数组，具有下标，长度等特性</p>
+<h3 id="3-如何去创建？"><a href="#3-如何去创建？" class="headerlink" title="3 如何去创建？"></a>3 如何去创建？</h3><p><code>new Buffer(长度)</code>  可以根据下标来赋值<br><strong>注意：长度只要定义了就不能增加</strong></p>
+<p><code>new Buffer(数组)</code>  把数组里面对应下标的值，赋值给Buffer对应下标的值</p>
+<p><code>new Buffer(&quot;字符串&quot;，&quot;utf-8&quot;)</code> 向Buffer赋值字符串，需要设置编码</p>
+<h3 id="4-Buffer与字符串的一点区别"><a href="#4-Buffer与字符串的一点区别" class="headerlink" title="4 Buffer与字符串的一点区别"></a>4 Buffer与字符串的一点区别</h3><p>Buffer与字符串有一个重要区别。字符串是只读的，并且对字符串的任何修改得到的都是一个新字符串，原字符串保持不变。</p>
+<p>至于Buffer，更像是可以做指针操作的C语言数组。例如，可以用[index]方式直接修改某个位置的字节。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[npm与nrm的一些基础操作命令]]></title>
       <url>http://yoursite.com/2015/02/02/NodeJs01/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>工欲善其事，必先利其器，要顺利使用NodeJs的各种模块包，我们就必须熟悉npm及其换源工具nrm的操作指令</p>
 </blockquote>
-<h2 id="1-npm操作："><a href="#1-npm操作：" class="headerlink" title="1.npm操作："></a>1.npm操作：</h2><p><code>npm init</code> 初始化一个新的package.json<br><code>npm install 包名</code> 安装模块<br><code>npm install -g</code> 全局安装模块<br><code>npm install 包名称  --save-dev</code>  把当前安装的这个包自动添加到package.json的文件夹中<br><strong>注意：如果<code>npm install</code>后面没有给具体的包名称，就会默认去package.json下安装devDependencies下所有的包</strong><br><code>npm adduser 用户名</code> 登录npm<br><code>npm publish</code> 把当前路径的包发布到npm<br><strong>注意2：必须把源切换回npm才能登录和上传</strong><br><strong>注意3：如果包名字重合了，必须在package.json中修改name值再重新上传</strong></p>
+<h2 id="1-npm操作："><a href="#1-npm操作：" class="headerlink" title="1.npm操作："></a>1.npm操作：</h2><p><code>npm init</code> 初始化一个新的package.json<br><code>npm install 包名</code> 安装模块<br><code>npm install -g</code> 全局安装模块<br><code>npm install 包名称  --save-dev</code>  把当前安装的这个包自动添加到package.json的文件夹中<br><strong>注意：如果<code>npm install</code>后面没有给具体的包名称，就会默认去<code>package.json</code>下安装<code>devDependencies</code>下所有的包</strong><br><code>npm adduser 用户名</code> 登录npm<br><code>npm publish</code> 把当前路径的包发布到npm<br><strong>注意2：必须把源切换回npm才能登录和上传</strong><br><strong>注意3：如果包名字重合了，必须在package.json中修改name值再重新上传</strong></p>
 <h2 id="2-npm换源插件nrm的操作："><a href="#2-npm换源插件nrm的操作：" class="headerlink" title="2.npm换源插件nrm的操作："></a>2.npm换源插件nrm的操作：</h2><blockquote>
 <p>nrm很好地解决了国内使用npm官方源下载缓慢的问题，以下是它的常用使用命令</p>
 </blockquote>
-<p><code>npm install -g nrm</code> :安装nrm<br><code>nrm ls</code> ： 显示源列表，源名前有#号的是正在使用的源<br><code>nrm use 源名</code> ：使用该源<br><code>nrm test 源名</code> : 测试源响应时间</p>
+<p><code>npm install -g nrm</code> ：安装nrm<br><code>nrm ls</code> ： 显示源列表，源名前有#号的是正在使用的源<br><code>nrm use 源名</code> ：使用该源<br><code>nrm test 源名</code> ： 测试源响应时间</p>
 ]]></content>
     </entry>
     

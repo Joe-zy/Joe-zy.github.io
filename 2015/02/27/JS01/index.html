@@ -7,13 +7,16 @@
 
     
 
-    <title>朱越的个人博客</title>
+    <title>对JavaScript中一些概念的理解（一） | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="1.对面向对象的理解 首先，对象是对实际事物的一个抽象，它包括了属性和方法两个概念，比如对于一个人来说，他的属性有姓名、身高、年龄等等，方法有吃饭，走路，跑步等等。对于万物都可以看作一个对象。
+ 在编程中主要分为面向过程(pop)和面向对象(oop)两大类，pop主要重视做事的过程，oop是关注参与">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="对JavaScript中一些概念的理解（一）"/>
     <meta property="og:site_name" content="Joe-zy&#39;s Blog 爱，自由，共享"/>
 
     
@@ -230,61 +233,42 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/前端/">前端</a>
+
+
         
 
-<div class="slider">
-    <ul class="slides">
-    
-       <li>
-           <a href="/">
-               <img class="slider-image" src="http://p1.bqimg.com/1949/60ade13c01813f81.jpg">
-               <div class="caption center-align">
-                 <h4>Welcome to my blog!</h3>
-                 <h5 class="light grey-text text-lighten-3">这一定会是一次有收获的相遇</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://p1.bqimg.com/1949/74676e48444f56f1.jpg">
-               <div class="caption left-align">
-                 <h4>Hello World</h3>
-                 <h5 class="light grey-text text-lighten-3">愿上帝赐予我平静，让我能接纳我无法改变的事，愿上帝赐予我勇气，让我能改变我可以改变的事，并赐予我智慧，让我能分辨这两者的不同</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://p1.bqimg.com/1949/f3567eef6de45fbb.jpg">
-               <div class="caption right-align">
-                 <h4>Time enough for love</h3>
-                 <h5 class="light grey-text text-lighten-3">时间足够你爱</h5>
-               </div>
-           </a>
-       </li>
-    
-   </ul>
- </div>
+        
+    </div>
+</nav>
 
-
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
+<article>
     <div class="card">
         <div class="card-content">
+            
+
             <div class="article-title">
                 
     
-        <h1 class="indigo-link-context"><a href="/2015/02/27/JS01/">对JavaScript中一些概念的理解（一）</a></h1>
+        <h1>对JavaScript中一些概念的理解（一）</h1>
     
 
 
             </div>
-
             <time class="pink-link-context" datetime="2015-02-27T06:02:29.000Z"><a href="/2015/02/27/JS01/">2015-02-27</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
 
             
     <div class="tags-row">
@@ -296,128 +280,69 @@
     </div>
 
 
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-对面向对象的理解"><span class="section table-of-contents-text">1.对面向对象的理解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-json"><span class="section table-of-contents-text">2.json</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#3-原型prototype"><span class="section table-of-contents-text">3.原型prototype</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#4-编译原理"><span class="section table-of-contents-text">4.编译原理</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#5-递归函数"><span class="section table-of-contents-text">5.递归函数</span></a></li></ol>
+</div>
 
-            
-        </div>
 
-        
-    </div>
-</article>
+            <div class="entry pink-link-context">
+                <h2 id="1-对面向对象的理解"><a href="#1-对面向对象的理解" class="headerlink" title="1.对面向对象的理解"></a>1.对面向对象的理解</h2><p> 首先，对象是对实际事物的一个抽象，它包括了属性和方法两个概念，比如对于一个人来说，他的属性有姓名、身高、年龄等等，方法有吃饭，走路，跑步等等。对于万物都可以看作一个对象。</p>
+<p> 在编程中主要分为<code>面向过程(pop)</code>和<code>面向对象(oop)</code>两大类，pop主要重视做事的过程，oop是关注参与者和他们的行为，形象一点说，比如我们在编写一段选项卡功能时，pop就是针对这一选项卡的功能来针对性地写代码，oop则是编写这一个选项卡对象，在编写难度上oop更高一些，但是它的特点在于可以复用代码，适合于模块化编写，一个页面中有多个选项卡都可以使用这一个对象，并为其增加个性化设置，而pop则需要根据不同选项卡进行多次代码编写，这也就是oop的好处。</p>
+<h2 id="2-json"><a href="#2-json" class="headerlink" title="2.json"></a>2.json</h2><p>json是js对象表示法，它的内容以键值对的方式存在，它的主要用途在于存储和交换信息，我们前端工作中主要利用json字符串与后台服务器数据库进行数据交换，它的优点在于它是轻量级文本数据交换格式，可被多种程序语言解读，比XML更小更快更易解析，也天生是一个js对象。</p>
+<p><strong>注意：json字符串中键名必须以双引号包裹，否则会在识别时出错</strong></p>
+<h2 id="3-原型prototype"><a href="#3-原型prototype" class="headerlink" title="3.原型prototype"></a>3.原型prototype</h2><p>JS中各种类型的对象都有一个prototype属性，这个属性本身是一个object类型的对象，它包含了很多属性与方法，同时我们也可以为不同类型对象的prototype属性添加特定的属性与方法，如通过:<code>构造函数.prototype.方法 = function(){}</code>;</p>
+<p><strong>注意：若在window.onload中对一些对象调用原型中的方法，但是这些方法是在这些代码下方设置的，就会报错。可以将这些设置prototype方法的代码写在window.onload外部或者写在内部的上方。</strong></p>
+<h2 id="4-编译原理"><a href="#4-编译原理" class="headerlink" title="4.编译原理"></a>4.编译原理</h2><p>浏览器在解读JS代码时有一个顺序，首先会进行一次预编译，通过对var function等关键字的查询，找到变量或者函数，放到一个仓库中，变量先为其设置undefined为初始值，函数就存一个空的代码块，然后再逐行执行代码。</p>
+<p><strong>注意：在逐行执行代码时，遇到赋值的时候会根据变量名对存在仓库中的变量或函数进行赋值，但是如果遇到变量与函数同名，则会用函数内容覆盖变量内容，如果遇到有同名的函数，就会用后载入的函数覆盖先载入的的。</strong></p>
+<h2 id="5-递归函数"><a href="#5-递归函数" class="headerlink" title="5.递归函数"></a>5.递归函数</h2><p>简单来说，递归函数就是在函数中调用自身这个函数，递归必须有入口和出口，就是说什么时候调用自己，什么时候不调用，否则会形成死循环，递归主要用在解决树状结构类似问题，如读取文件目录，货品分类树等。</p>
 
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
                 
-    
-        <h1 class="indigo-link-context"><a href="/2015/02/16/NodeJs02/">NodeJs中的Buffer类</a></h1>
-    
+
+
+<p class="pink-link-context">
+    <a href="/2015/02/16/NodeJs02/" rel="next" title="NodeJs中的Buffer类">
+    下一篇：NodeJs中的Buffer类
+  </a>
+</p>
 
 
             </div>
-
-            <time class="pink-link-context" datetime="2015-02-16T11:09:35.000Z"><a href="/2015/02/16/NodeJs02/">2015-02-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/NodeJs/" class="chip pink lighten-1">NodeJs</a>
-        
-            <a href="/tags/Buffer类/" class="chip pink lighten-1">Buffer类</a>
-        
-    </div>
-
-
-
-            
+			
         </div>
-
-        
     </div>
 </article>
 
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2015/02/02/NodeJs01/">npm与nrm的一些基础操作命令</a></h1>
-    
 
 
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2015/02/27/JS01/" data-title="对JavaScript中一些概念的理解（一）" data-url="http://yoursite.com/2015/02/27/JS01/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'joe-zy'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
             </div>
-
-            <time class="pink-link-context" datetime="2015-02-02T11:28:21.000Z"><a href="/2015/02/02/NodeJs01/">2015-02-02</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/NodeJs/" class="chip pink lighten-1">NodeJs</a>
-        
-            <a href="/tags/基础知识/" class="chip pink lighten-1">基础知识</a>
-        
-    </div>
-
-
-
-            
         </div>
-
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2015/01/29/hello/">Hello World!</a></h1>
-    
+    </section>
 
 
-            </div>
-
-            <time class="pink-link-context" datetime="2015-01-29T03:16:12.000Z"><a href="/2015/01/29/hello/">2015-01-29</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/首篇/" class="chip pink lighten-1">首篇</a>
-        
-            <a href="/tags/谈论/" class="chip pink lighten-1">谈论</a>
-        
-    </div>
-
-
-
-            
-        </div>
-
-        
-    </div>
-</article>
-
-    
-
-    <ul class="pagination center-align">
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="active pink"><a href="/">1</a></li>
-    
-    
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
 
 </div>
 
