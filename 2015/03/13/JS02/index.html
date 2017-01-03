@@ -7,13 +7,16 @@
 
     
 
-    <title>归档 | 朱越的个人博客</title>
+    <title>对JavaScript中一些概念的理解（二） | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="1.匿名函数只有function(){}没有名称标识符的就是匿名函数，优点是书写简单便捷，缺点是因为在内存栈中没有有意义的函数名，所以调试困难，另外就是没有函数名，就缺乏一个对该段代码的描述，降低了一定的可读性。
+2.回调函数回调函数是指传一个函数指针作为参数传到另一个函数中，另一个函数会在需要时执">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="对JavaScript中一些概念的理解（二）"/>
     <meta property="og:site_name" content="Joe-zy&#39;s Blog"/>
 
     
@@ -231,64 +234,114 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/前端/">前端</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>对JavaScript中一些概念的理解（二）</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2015-03-13T09:03:16.000Z"><a href="/2015/03/13/JS02/">2015-03-13</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/JavaScript/" class="chip pink lighten-1">JavaScript</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2015
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2015/03/13/JS02/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-03-13T09:03:16.000Z">2015-03-13</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                对JavaScript中一些概念的理解（二）
-                            </a>
-                        
-                            <a href="/2015/02/27/JS01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-02-27T06:02:29.000Z">2015-02-27</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                对JavaScript中一些概念的理解（一）
-                            </a>
-                        
-                            <a href="/2015/02/16/NodeJs02/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-02-16T11:09:35.000Z">2015-02-16</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                NodeJs中的Buffer类
-                            </a>
-                        
-                            <a href="/2015/02/02/NodeJs01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-02-02T11:28:21.000Z">2015-02-02</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                npm与nrm的一些基础操作命令
-                            </a>
-                        
-                            <a href="/2015/01/29/hello/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-01-29T03:16:12.000Z">2015-01-29</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World!
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/概念理解/" class="chip pink lighten-1">概念理解</a>
         
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-匿名函数"><span class="section table-of-contents-text">1.匿名函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-回调函数"><span class="section table-of-contents-text">2.回调函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#3-闭包"><span class="section table-of-contents-text">3.闭包</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#4-惰性载入"><span class="section table-of-contents-text">4.惰性载入</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#5-this"><span class="section table-of-contents-text">5.this</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h2 id="1-匿名函数"><a href="#1-匿名函数" class="headerlink" title="1.匿名函数"></a>1.匿名函数</h2><p>只有<code>function(){}</code>没有名称标识符的就是匿名函数，优点是书写简单便捷，缺点是因为在内存栈中没有有意义的函数名，所以调试困难，另外就是没有函数名，就缺乏一个对该段代码的描述，降低了一定的可读性。</p>
+<h2 id="2-回调函数"><a href="#2-回调函数" class="headerlink" title="2.回调函数"></a>2.回调函数</h2><p>回调函数是指传一个函数指针作为参数传到另一个函数中，另一个函数会在需要时执行这个函数的一种方式。</p>
+<h2 id="3-闭包"><a href="#3-闭包" class="headerlink" title="3.闭包"></a>3.闭包</h2><p><strong>闭包就是一种私有化变量的方法</strong>，比如：函数中嵌套函数，内部的函数可以使用外部函数的参数或变量，并且参数或变量不会被js垃圾回收机制收回。</p>
+<p>当希望变量能长期驻扎在内存中，又不想设置其为全局变量（容易发生全局变量污染），可以用闭包来实现</p>
+<p>又比如：通过一个自执行函数，将全局变量传到函数内部接受，就可以在函数内部私有化这个变量，而且不会影响外部<code>(function($){console,log($);})(jQuery)</code></p>
+<h2 id="4-惰性载入"><a href="#4-惰性载入" class="headerlink" title="4.惰性载入"></a>4.惰性载入</h2><p>这是一种性能优化的思想，比如我们再执行一个函数时，该函数需要对浏览器的不同类型作出不同的反应，那么每次执行该函数都要执行一次判断就会很浪费性能，因为在页面浏览过程中也不会中途更换浏览器，所以可以在第一次执行函数时执行判断，然后就更新函数内容，这样就只判断一次，优化了性能。</p>
+<p><strong>最好也不要把函数设置为在载入时自动执行判断来更新函数内容</strong>，打个比方，jQuery中有非常多的方法，内部会判断运行环境作兼容性处理，如果每一个函数都在载入时自动判断一次，那么就非常消耗性能，我们在使用jQuery时不会用到每一个功能，那么只有在使用这个功能时才进行兼容性的判断，那么就节约了性能，这也就是所谓的惰性载入的思想。</p>
+<h2 id="5-this"><a href="#5-this" class="headerlink" title="5.this"></a>5.this</h2><p>在用面向对象的思想进行程序编写时，每一个this的指向是最大的难点，我们在编写时应该理清代码的顺序，同时注意一点：<strong>函数里的this指代的当前调用函数的对象，如果是最外层或者表面上没有人调用，那么this就指向window</strong>。</p>
+<p>如果在一些函数内部的this不是我们希望指代的对象，我们可以通过传参数等方式将我们希望指代的对象传进去。</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2015/02/27/JS01/" rel="next" title="对JavaScript中一些概念的理解（一）">
+    下一篇：对JavaScript中一些概念的理解（一）
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2015/03/13/JS02/" data-title="对JavaScript中一些概念的理解（二）" data-url="http://yoursite.com/2015/03/13/JS02/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'joe-zy'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>

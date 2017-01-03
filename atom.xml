@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-30T13:01:44.947Z</updated>
+  <updated>2017-01-03T09:05:06.727Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对JavaScript中一些概念的理解（二）</title>
+    <link href="http://yoursite.com/2015/03/13/JS02/"/>
+    <id>http://yoursite.com/2015/03/13/JS02/</id>
+    <published>2015-03-13T09:03:16.000Z</published>
+    <updated>2017-01-03T09:05:06.727Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-匿名函数&quot;&gt;&lt;a href=&quot;#1-匿名函数&quot; class=&quot;headerlink&quot; title=&quot;1.匿名函数&quot;&gt;&lt;/a&gt;1.匿名函数&lt;/h2&gt;&lt;p&gt;只有&lt;code&gt;function(){}&lt;/code&gt;没有名称标识符的就是匿名函数，优点是书写简单便捷，缺点
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="概念理解" scheme="http://yoursite.com/tags/%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>对JavaScript中一些概念的理解（一）</title>
