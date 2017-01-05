@@ -7,17 +7,13 @@
 
     
 
-    <title>NodeJs中的Buffer类 | 朱越的个人博客</title>
+    <title>mongoDB数据库 | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
-    
-    <meta name="description" content="1 Buffer 是什么?所谓缓冲区Buffer，就是 “临时存贮区” 的意思，是暂时存放输入输出数据的一段内存。
-JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作。
-2 Buffer 怎样用？Buff">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="NodeJs中的Buffer类"/>
+    
     <meta property="og:site_name" content="Joe-zy&#39;s Blog"/>
 
     
@@ -235,119 +231,30 @@ JS语言自身只有字符串数据类型，没有二进制数据类型，因此
 
     <main>
         <div class="container main-container">
-    <nav class="page-nav hide-on-small-only">
+    
+
+<nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（分类目录）</span>
-        
-            
-    
-    
-    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/后端/">后端</a>
-
-
+        <span class="breadcrumb">当前位置（标签）</span>
         
 
+        
+            <a class="breadcrumb" href="/tags/mongoDB数据库/">mongoDB数据库</a>
         
     </div>
 </nav>
 
-<article>
-    <div class="card">
-        <div class="card-content">
-            
-
-            <div class="article-title">
-                
-    
-        <h1>NodeJs中的Buffer类</h1>
-    
 
 
-            </div>
-            <time class="pink-link-context" datetime="2015-02-16T11:09:35.000Z"><a href="/2015/02/16/NodeJs02/">2015-02-16</a></time>
-
-            <span id="busuanzi_container_page_pv" class="read-times-container">
-    <i class="fa fa-eye"></i>
-    <span id="busuanzi_value_page_pv"></span>
-</span>
-
-            
-    <div class="tags-row">
+    <div class="collection mt-0">
         
-            <a href="/tags/NodeJs/" class="chip pink lighten-1">NodeJs</a>
-        
-            <a href="/tags/Buffer类/" class="chip pink lighten-1">Buffer类</a>
+            <a href="/2015/03/29/NodeJs03/" class="collection-item grey-text text-darken-1">
+                <time datetime="2015-03-29T04:57:26.000Z">2015-03-29</time>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                使用mongoose向数据库添加数据三部曲
+            </a>
         
     </div>
-
-
-            <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#1-Buffer-是什么"><span class="section table-of-contents-text">1 Buffer 是什么?</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#2-Buffer-怎样用？"><span class="section table-of-contents-text">2 Buffer 怎样用？</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#3-如何去创建？"><span class="section table-of-contents-text">3 如何去创建？</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#4-Buffer与字符串的一点区别"><span class="section table-of-contents-text">4 Buffer与字符串的一点区别</span></a></li></ol>
-</div>
-
-
-            <div class="entry pink-link-context">
-                <h3 id="1-Buffer-是什么"><a href="#1-Buffer-是什么" class="headerlink" title="1 Buffer 是什么?"></a>1 Buffer 是什么?</h3><p>所谓缓冲区Buffer，就是 “临时存贮区” 的意思，是暂时存放输入输出数据的一段内存。</p>
-<p>JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作。</p>
-<h3 id="2-Buffer-怎样用？"><a href="#2-Buffer-怎样用？" class="headerlink" title="2 Buffer 怎样用？"></a>2 Buffer 怎样用？</h3><p>Buffer的形式类似于数组，具有下标，长度等特性</p>
-<h3 id="3-如何去创建？"><a href="#3-如何去创建？" class="headerlink" title="3 如何去创建？"></a>3 如何去创建？</h3><p><code>new Buffer(长度)</code>  可以根据下标来赋值<br><strong>注意：长度只要定义了就不能增加</strong></p>
-<p><code>new Buffer(数组)</code>  把数组里面对应下标的值，赋值给Buffer对应下标的值</p>
-<p><code>new Buffer(&quot;字符串&quot;，&quot;utf-8&quot;)</code> 向Buffer赋值字符串，需要设置编码</p>
-<h3 id="4-Buffer与字符串的一点区别"><a href="#4-Buffer与字符串的一点区别" class="headerlink" title="4 Buffer与字符串的一点区别"></a>4 Buffer与字符串的一点区别</h3><p>Buffer与字符串有一个重要区别。字符串是只读的，并且对字符串的任何修改得到的都是一个新字符串，原字符串保持不变。</p>
-<p>至于Buffer，更像是可以做指针操作的C语言数组。例如，可以用[index]方式直接修改某个位置的字节。</p>
-
-                
-<p class="pink-link-context">
-    <a href="/2015/02/27/JS01/" rel="next" title="对JavaScript中一些概念的理解（一）">
-    上一篇：对JavaScript中一些概念的理解（一）
-  </a>
-</p>
-
-
-
-<p class="pink-link-context">
-    <a href="/2015/02/02/NodeJs01/" rel="next" title="npm与nrm的一些基础操作命令">
-    下一篇：npm与nrm的一些基础操作命令
-  </a>
-</p>
-
-
-            </div>
-			
-        </div>
-    </div>
-</article>
-
-
-
-
-    <section id="comment">
-        <div class="card">
-            <div class="card-content">
-                <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2015/02/16/NodeJs02/" data-title="NodeJs中的Buffer类" data-url="http://yoursite.com/2015/02/16/NodeJs02/"></div>
-
-                <script type="text/javascript">
-                    console.log(document.querySelector('.ds-thread'));
-                    var duoshuoQuery = {
-                        short_name: 'joe-zy'
-                    };
-                    (function() {
-                        var ds = document.createElement('script');
-                        ds.type = 'text/javascript';
-                        ds.async = true;
-                        ds.src = (document.location.protocol == 'https:'
-                            ? 'https:'
-                            : 'http:') + '//static.duoshuo.com/embed.js';
-                        ds.charset = 'UTF-8';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-                    })();
-                </script>
-                <!-- Duoshuo Comment END -->
-            </div>
-        </div>
-    </section>
-
 
 
 </div>

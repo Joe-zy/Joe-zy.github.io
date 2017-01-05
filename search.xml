@@ -4,6 +4,42 @@
   
     
     <entry>
+      <title><![CDATA[使用mongoose向数据库添加数据三部曲]]></title>
+      <url>http://yoursite.com/2015/03/29/NodeJs03/</url>
+      <content type="html"><![CDATA[<h2 id="1-连接数据库"><a href="#1-连接数据库" class="headerlink" title="1.连接数据库"></a>1.连接数据库</h2><p>使用mongoose连接数据库的前提条件是：</p>
+<ol>
+<li>mongo数据库已经运行。</li>
+<li>已经安装了mongoose包。<code>npm install mongoose --save</code></li>
+</ol>
+<pre><code>var mongoose = require(&quot;mongoose&quot;);
+mongoose.connect(&apos;mongodb://localhost/student&apos;);
+//连接字符串格式为mongodb://主机/数据库名;
+</code></pre><p>上面这句的意思是连接到本地的mongodb的student表。</p>
+<h2 id="2-新增数据"><a href="#2-新增数据" class="headerlink" title="2.新增数据"></a>2.新增数据</h2><p>存储数据步骤：定义Schema- (模式)&gt;创建model-(模型)&gt;实例化方法</p>
+<pre><code>var Schema = mongoose.Schema;
+//通过Schema创建一个模式NewsSchema
+var studentSchema = new Schema({      
+    name: String,
+     age: Number
+});
+//通过模式studentSchema  创建一个数据模型studentModel 
+var studentModel = mongoose.model(&quot;students&quot;,studentSchema);
+var instance1 = new studentModel ({
+    name:&quot;Joe&quot;,
+    age:18
+}); 
+</code></pre><h2 id="3-向数据库存储创建的数据"><a href="#3-向数据库存储创建的数据" class="headerlink" title="3.向数据库存储创建的数据"></a>3.向数据库存储创建的数据</h2><p>最后将创建的数据通过其自带的save方法存储到数据库中</p>
+<pre><code>//通过save方法保存
+instance1.save(function(err){
+    if (err) {
+       console.log(&quot;保存失败&quot;);  
+       return;
+    }
+ });
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[对JavaScript中一些概念的理解（二）]]></title>
       <url>http://yoursite.com/2015/03/13/JS02/</url>
       <content type="html"><![CDATA[<h2 id="1-匿名函数"><a href="#1-匿名函数" class="headerlink" title="1.匿名函数"></a>1.匿名函数</h2><p>只有<code>function(){}</code>没有名称标识符的就是匿名函数，优点是书写简单便捷，缺点是因为在内存栈中没有有意义的函数名，所以调试困难，另外就是没有函数名，就缺乏一个对该段代码的描述，降低了一定的可读性。</p>
