@@ -111,16 +111,16 @@ instance1.save(function(err){
   
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yoursite.com/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！<br>我搭建这个博客的目的在于记录我在学习编程技术过程中的收获、体会和总结，并分享给大家，如果我的文章对大家有一丝的帮助，我不胜荣幸。当然，偶尔也分享生活^.^</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yoursite.com/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
