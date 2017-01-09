@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-04T05:13:36.307Z</updated>
+  <updated>2017-01-09T10:21:19.828Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览器中Jacascript引擎解读代码的步骤</title>
+    <link href="http://yoursite.com/2015/04/15/JS03/"/>
+    <id>http://yoursite.com/2015/04/15/JS03/</id>
+    <published>2015-04-15T10:04:10.000Z</published>
+    <updated>2017-01-09T10:21:19.828Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;根据一些关键字来找东西（&lt;code&gt;var&lt;/code&gt;、&lt;code&gt;function&lt;/code&gt;），找到后存到&lt;code&gt;仓库&lt;/code&gt;里面去（属于JS的预解析工作）。&lt;br&gt;找东西的规则：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="JS引擎" scheme="http://yoursite.com/tags/JS%E5%BC%95%E6%93%8E/"/>
+    
+  </entry>
   
   <entry>
     <title>使用mongoose向数据库添加数据三部曲</title>
