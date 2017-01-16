@@ -195,17 +195,21 @@
                     for(var i = 0;i < del.length;i++){//删除任务
                         del[i].index = i
                         del[i].onclick = function () {
-                            var a = con[this.index].innerText;
-                            var b = mDate[this.index].innerText;
-                            for(var j = 0;j < arr.data.length;j++){
-                                if(arr.data[j].text == a && arr.data[j].date == b){
-                                    arr.data.splice(j,1);
-                                    alert("数据删除成功！");
+                            if(window.confirm("是否删除该数据？")){
+                                var a = con[this.index].innerText;
+                                var b = mDate[this.index].innerText;
+                                for(var j = 0;j < arr.data.length;j++){
+                                    if(arr.data[j].text == a && arr.data[j].date == b){
+                                        arr.data.splice(j,1);
+                                        alert("数据删除成功！");
+                                    }
                                 }
+                                localStorage.setItem("data",JSON.stringify(arr));
+                                var html = template("mytmpl",{data:arr.data});//渲染任务列表
+                                plan.innerHTML = html;
+
                             }
-                            localStorage.setItem("data",JSON.stringify(arr));
-                            var html = template("mytmpl",{data:arr.data});//渲染任务列表
-                            plan.innerHTML = html;
+
 
                         }
                     }
