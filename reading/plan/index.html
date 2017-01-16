@@ -207,6 +207,7 @@
                                 localStorage.setItem("data",JSON.stringify(arr));
                                 var html = template("mytmpl",{data:arr.data});//渲染任务列表
                                 plan.innerHTML = html;
+                                location.reload();
 
                             }
 
