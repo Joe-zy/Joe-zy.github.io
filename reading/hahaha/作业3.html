@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工作计划</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft Yahei", "微软雅黑", sans-serif;
+        }
+
+        body {
+            background-color: #DDD;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            width: 100%;
+            height: 3rem;
+            color: #FFF;
+            font-size: 1.2rem;
+            line-height: 3rem;
+            text-align: center;
+            background-color: #0F4D92;
+        }
+
+        nav {
+            background-color: #686868;
+            height: 2.6rem;
+            line-height: 2.6rem;
+            text-align: center;
+        }
+
+        nav a {
+            background-color: #444;
+            font-size: 1rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.5rem;
+            color: #FFF;
+
+        }
+
+        nav a.active {
+            background-color: #222;
+            color: #0681AA;
+        }
+
+        #plan li {
+            border-bottom: 1px solid #CCC;
+            margin-bottom: 4px;
+            padding: 0.6rem 1rem;
+            background-color: #FFF;
+            height: 2.4rem;
+            position: relative;
+        }
+
+        #plan li .check {
+            float: left;
+            margin-top: 0.8rem;
+        }
+
+        #plan li .content {
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        #plan li .date {
+            color: #9E9E9E;
+            font-size: 0.9rem;
+            margin-left: 1.6rem;
+        }
+
+        #plan li .delete {
+            padding: 0.5rem 0.6rem;
+            background-color: #AD390C;
+            border-radius: 0.4rem;
+            color: #FFF;
+            border: 0;
+            float: right;
+            margin-bottom: 12px;
+            display: block;
+            position: absolute;
+            right: 0.5rem;
+            top: 0.8rem;
+        }
+        #addplan{
+            display: none;
+        }
+        #addplan p{
+            margin-top: 0.8rem;
+        }
+        #addplan .sub{
+            padding: 0.4rem 0.6rem;
+            width: 60%;
+            margin: 1rem auto;
+            border: 0;
+            background-color: #00a9e0;
+            color: #FFF;
+            border-radius: 0.5rem;
+            display: block;
+        }
+    </style>
+    <script src="./template.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <header>工作计划</header>
+    <nav>
+        <a href="###" class="active">任务列表</a>
+        <a href="###">添加任务</a>
+        <a href="###">软件设置</a>
+    </nav>
+    <section id="plan">
+        <ul id="plan-list">
+            <script type="text/html" id="mytmpl">
+            {{each data as v i}}
+            <li>
+                <input type="checkbox" name="" class="check"/>
+                <p class="content">{{v.text}}</p>
+                <p class="date">{{v.date}}</p>
+                <input type="button" value="删除" class="delete"/>
+            </li>
+             {{/each}}
+            </script>
+        </ul>
+    </section>
+    <section id="addplan">
+        <p>计划内容：<textarea name="" cols="30" rows="10"></textarea></p>
+        <p>计划日期：<input type="date"/></p>
+        <input type="button" class="sub" value="提交计划"/>
+
+    </section>
+    <script>
+            window.onload = function () {
+                if(localStorage.getItem("data") == null){//如果没有数据则初始化数据
+                    localStorage.setItem("data",'{"data":[]}')
+                }
+                var nav = document.getElementsByTagName("nav")[0];
+                var navButton = nav.getElementsByTagName("a");
+                var con = document.getElementsByClassName("content");
+                var mDate = document.getElementsByClassName("date");
+                var sec = document.getElementsByTagName("section");
+                var add = document.getElementById("addplan");
+                var plan = document.getElementById("plan-list");
+
+                var sub = add.getElementsByClassName("sub")[0];
+                var arr = JSON.parse(localStorage.getItem("data"));
+
+
+                var html = template("mytmpl",{data:arr.data});//渲染任务列表
+                plan.innerHTML = html
+
+
+                for(var i = 0 ; i < navButton.length; i++){//按钮分页
+                    navButton[i].index = i;
+                    navButton[i].onclick = function () {
+                        for(var j = 0 ;j < navButton.length;j++){
+                            navButton[j].className = "";
+                        }
+                        this.className = "active";
+                        for(var k = 0;k < sec.length;k++){
+                            sec[k].style.display = "none";
+                        }
+                        sec[this.index].style.display = "block";
+                    }
+
+                }
+
+                sub.onclick = function () {//新建任务
+                    var text = add.getElementsByTagName("textarea")[0].value;
+                    var date = add.getElementsByTagName("input")[0].value;
+                    var newData = {
+                        "text":text,
+                        "date":date
+                    }
+                    arr.data.push(newData);
+                    localStorage.setItem("data",JSON.stringify(arr));
+                    var html = template("mytmpl",{data:arr.data});//渲染任务列表
+                    plan.innerHTML = html;
+                    alert("任务保存成功！");
+                    location.reload();
+                }
+                remove();
+                function remove(){
+                    var del = document.getElementsByClassName("delete");
+                    for(var i = 0;i < del.length;i++){//删除任务
+                        del[i].index = i
+                        del[i].onclick = function () {
+                            var a = con[this.index].innerText;
+                            var b = mDate[this.index].innerText;
+                            for(var j = 0;j < arr.data.length;j++){
+                                if(arr.data[j].text == a && arr.data[j].date == b){
+                                    arr.data.splice(j,1);
+                                    alert("数据删除成功！");
+                                }
+                            }
+                            localStorage.setItem("data",JSON.stringify(arr));
+                            var html = template("mytmpl",{data:arr.data});//渲染任务列表
+                            plan.innerHTML = html;
+
+                        }
+                    }
+                }
+            }
+
+    </script>
+</body>
+</html>
