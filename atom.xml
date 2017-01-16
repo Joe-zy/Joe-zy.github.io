@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-14T06:13:49.225Z</updated>
+  <updated>2017-01-16T07:30:47.279Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTML5中input标签的新类型</title>
+    <link href="http://yoursite.com/2015/05/16/HTML01/"/>
+    <id>http://yoursite.com/2015/05/16/HTML01/</id>
+    <published>2015-05-16T06:49:19.000Z</published>
+    <updated>2017-01-16T07:30:47.279Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-color&quot;&gt;&lt;a href=&quot;#1-color&quot; class=&quot;headerlink&quot; title=&quot;1.color&quot;&gt;&lt;/a&gt;1.color&lt;/h3&gt;&lt;p&gt;生成一个拾色器&lt;/p&gt;
+&lt;h3 id=&quot;2-Date&quot;&gt;&lt;a href=&quot;#2-Date&quot; clas
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://yoursite.com/tags/HTML5/"/>
+    
+      <category term="input" scheme="http://yoursite.com/tags/input/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用mongoose对mongoDB数据库进行增删改查操作</title>
     <link href="http://yoursite.com/2015/04/27/NodeJs04/"/>
     <id>http://yoursite.com/2015/04/27/NodeJs04/</id>
     <published>2015-04-27T06:08:29.000Z</published>
-    <updated>2017-01-14T06:13:49.225Z</updated>
+    <updated>2017-01-14T06:15:36.604Z</updated>
     
     <summary type="html">
     

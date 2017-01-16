@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title><![CDATA[HTML5中input标签的新类型]]></title>
+      <url>http://yoursite.com/2015/05/16/HTML01/</url>
+      <content type="html"><![CDATA[<h3 id="1-color"><a href="#1-color" class="headerlink" title="1.color"></a>1.color</h3><p>生成一个拾色器</p>
+<h3 id="2-Date"><a href="#2-Date" class="headerlink" title="2.Date"></a>2.Date</h3><p>将输入框变成日期输入框</p>
+<h3 id="3-datetime-local"><a href="#3-datetime-local" class="headerlink" title="3.datetime-local"></a>3.datetime-local</h3><p>日期及时间输入框</p>
+<h3 id="4-month"><a href="#4-month" class="headerlink" title="4.month"></a>4.month</h3><p>月份输入框</p>
+<h3 id="5-time"><a href="#5-time" class="headerlink" title="5.time"></a>5.time</h3><p>时间输入框</p>
+<h3 id="6-week"><a href="#6-week" class="headerlink" title="6.week"></a>6.week</h3><p>周输入框</p>
+<h3 id="7-email"><a href="#7-email" class="headerlink" title="7.email"></a>7.email</h3><p>邮箱地址输入框，<strong>注意：在提交时该input框会验证邮箱格式的有效性，必须包含@，但是没有其他要求</strong></p>
+<h3 id="8-number"><a href="#8-number" class="headerlink" title="8.number"></a>8.number</h3><p>数字输入框，该input框只能输入数字，可加属性<code>min</code>、<code>max</code>，来赋值设置输入范围，加属性<code>step</code>，来设置每次增减的值（步长）</p>
+<h3 id="9-range"><a href="#9-range" class="headerlink" title="9.range"></a>9.range</h3><p>区间输入框，可以配合<code>oninput</code>事件，实现一边选择一边查看数值的功能</p>
+<h3 id="10-search"><a href="#10-search" class="headerlink" title="10.search"></a>10.search</h3><p>搜索输入框，输入内容后会有删除内容的按钮。</p>
+<h3 id="11-tel"><a href="#11-tel" class="headerlink" title="11.tel"></a>11.tel</h3><p>与text输入框并没有区别</p>
+<h3 id="12-url"><a href="#12-url" class="headerlink" title="12.url"></a>12.url</h3><p>网址输入框，要求使用<code>http://</code>开头输入数据</p>
+<h3 id="13-datalist"><a href="#13-datalist" class="headerlink" title="13.datalist"></a>13.datalist</h3><ol>
+<li>在input输入框中定义list属性，指向到datalist的ID</li>
+<li><p>创建datalist标签，设置option子标签，设置ID值</p>
+<p> 请选择城市：<input type="text" list="city"></p>
+<pre><code>&lt;datalist id=&quot;city&quot;&gt;
+    &lt;option value=&quot;北京&quot;&gt;北京&lt;/option&gt;
+    &lt;option value=&quot;成都&quot;&gt;成都&lt;/option&gt;
+    &lt;option value=&quot;广州&quot;&gt;广州&lt;/option&gt;
+    &lt;option value=&quot;上海&quot;&gt;上海&lt;/option&gt;
+    &lt;option value=&quot;深圳&quot;&gt;深圳&lt;/option&gt;
+    &lt;option value=&quot;杭州&quot;&gt;杭州&lt;/option&gt;
+&lt;/datalist&gt;
+</code></pre></li>
+</ol>
+<h3 id="支持程度"><a href="#支持程度" class="headerlink" title="支持程度"></a>支持程度</h3><p>目前新的特性各大浏览器支持程度各不相同，自测PC端chrome浏览器支持较好，火狐浏览器部分支持，IE9以下浏览器全部不支持，在移动端支持程度较好。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用mongoose对mongoDB数据库进行增删改查操作]]></title>
       <url>http://yoursite.com/2015/04/27/NodeJs04/</url>
       <content type="html"><![CDATA[<h2 id="1-增加数据"><a href="#1-增加数据" class="headerlink" title="1.增加数据"></a>1.增加数据</h2><pre><code>var data=new adminModel();
@@ -143,16 +176,16 @@ instance1.save(function(err){
   
     
     <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yoursite.com/reading/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！<br>我搭建这个博客的目的在于记录我在学习编程技术过程中的收获、体会和总结，并分享给大家，如果我的文章对大家有一丝的帮助，我不胜荣幸。当然，偶尔也分享生活^.^</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yoursite.com/reading/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
