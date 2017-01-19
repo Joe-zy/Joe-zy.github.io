@@ -43,16 +43,16 @@ html {
 .container {
   width: 800px;
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .container {
-    width: 90%;
+    width: 100%;
   }
 }
 .container .row {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .container.main-container {
     width: 100%;
   }
@@ -349,7 +349,7 @@ article .entry {
 }
 article .article-title h1 {
   font-family: "微软雅黑", "sans-serif", "Helvetica Neue";
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
   line-height: 1.4;
   margin-top: 0;
@@ -406,10 +406,9 @@ article .card-content .entry {
 article .card-content .entry p {
   margin-top: 0;
   margin-bottom: 1em;
-  text-align: justify;
-  text-justify: inter-ideograph;
   word-break: initial;
   word-break: break-word;
+  word-break: break-all;
 }
 article .card-content .entry p:last-child {
   margin-bottom: 0;
