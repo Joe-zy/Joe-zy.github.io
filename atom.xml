@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-16T07:34:11.222Z</updated>
+  <updated>2017-01-21T03:02:06.032Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS3中Flex伸缩布局的属性简介</title>
+    <link href="http://yoursite.com/2015/05/26/css3-01/"/>
+    <id>http://yoursite.com/2015/05/26/css3-01/</id>
+    <published>2015-05-26T02:54:53.000Z</published>
+    <updated>2017-01-21T03:02:06.032Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-flexbox&quot;&gt;&lt;a href=&quot;#1-flexbox&quot; class=&quot;headerlink&quot; title=&quot;1.flexbox&quot;&gt;&lt;/a&gt;1.flexbox&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;flexbox是CSS3中经过几年制定后推出的最新的弹性式
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS3" scheme="http://yoursite.com/tags/CSS3/"/>
+    
+      <category term="flex" scheme="http://yoursite.com/tags/flex/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML5中input标签的新类型</title>

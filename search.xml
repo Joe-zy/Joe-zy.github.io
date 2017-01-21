@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[CSS3中Flex伸缩布局的属性简介]]></title>
+      <url>http://yoursite.com/2015/05/26/css3-01/</url>
+      <content type="html"><![CDATA[<h2 id="1-flexbox"><a href="#1-flexbox" class="headerlink" title="1.flexbox"></a>1.flexbox</h2><blockquote>
+<p>flexbox是CSS3中经过几年制定后推出的最新的弹性式布局方式，它解决了传统布局方式中难以解决的“垂直居中”等痛点，同时还非常灵活，可用性强，在进行移动端响应式布局时很适合使用。</p>
+</blockquote>
+<p>##　2.flex针对父级元素的属性</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[HTML5中input标签的新类型]]></title>
       <url>http://yoursite.com/2015/05/16/HTML01/</url>
       <content type="html"><![CDATA[<h3 id="1-color"><a href="#1-color" class="headerlink" title="1.color"></a>1.color</h3><p>生成一个拾色器</p>
