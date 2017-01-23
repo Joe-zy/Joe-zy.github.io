@@ -13,7 +13,7 @@
     <meta name="description" content="1.flexbox
 flexbox是CSS3中经过几年制定后推出的最新的弹性式布局方式，它解决了传统布局方式中难以解决的“垂直居中”等痛点，同时还非常灵活，可用性强，在进行移动端响应式布局时很适合使用。
 
-##　2.flex针对父级元素的属性">
+2.flex针对父级元素的属性2.1 flex-direction 布局方向row : 默认的">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -286,7 +286,7 @@ flexbox是CSS3中经过几年制定后推出的最新的弹性式布局方式，
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-flexbox"><span class="section table-of-contents-text">1.flexbox</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-flexbox"><span class="section table-of-contents-text">1.flexbox</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-flex针对父级元素的属性"><span class="section table-of-contents-text">2.flex针对父级元素的属性</span></a></li></ol>
 </div>
 
 
@@ -294,7 +294,12 @@ flexbox是CSS3中经过几年制定后推出的最新的弹性式布局方式，
                 <h2 id="1-flexbox"><a href="#1-flexbox" class="headerlink" title="1.flexbox"></a>1.flexbox</h2><blockquote>
 <p>flexbox是CSS3中经过几年制定后推出的最新的弹性式布局方式，它解决了传统布局方式中难以解决的“垂直居中”等痛点，同时还非常灵活，可用性强，在进行移动端响应式布局时很适合使用。</p>
 </blockquote>
-<p>##　2.flex针对父级元素的属性</p>
+<h2 id="2-flex针对父级元素的属性"><a href="#2-flex针对父级元素的属性" class="headerlink" title="2.flex针对父级元素的属性"></a>2.flex针对父级元素的属性</h2><p><strong>2.1 <code>flex-direction</code> 布局方向</strong><br><code>row</code> : 默认的，从左向右延伸<br><code>row-reverse</code>: 从右向左延伸<br><code>column</code>: 从上向下延伸<br><code>column-reverse</code>: 从下向上延伸</p>
+<p><strong>2.2 <code>flex-wrap</code> 超出后是否换行</strong><br><code>nowrap</code> : 默认值，不换行，强制将超出部分平均压缩，让效果不超出<br><code>wrap</code>: 换行，一行装不下，自动换行<br><code>wrap-reverse</code>: 可以换行，并且反转</p>
+<p><strong>2.3 <code>flex-flow</code> 复合属性，前面两属性的综合体</strong></p>
+<p><strong>2.4 <code>justify-content</code> 水平对齐方式</strong><br><code>flex-start</code>: 起始点对齐（左对齐）<br><code>flex-end</code>: 结束点对齐（右对齐）<br><code>center</code>: 居中对齐<br><code>space-between</code>: 两端对齐<br><code>space-around</code>: 环绕对齐</p>
+<p><strong>2.5 <code>lign-items</code> 项目侧轴对齐方式（垂直对齐）</strong><br><code>flex-start</code>: 起始点对齐（顶端对齐）<br><code>flex-end</code>: 结束点对齐（底端对齐）<br><code>center</code>: 居中对齐<br><code>baseline</code>: 基线对齐<br><strong>注意：如果是多行，则平均分配高度，每行当成一个项目，在项目内进行排列</strong></p>
+<p>2<strong>2.6 <code>align-content</code> 内容的侧轴对齐方式</strong><br><code>flex-start</code>: 起始点对齐（顶端对齐）<br><code>flex-end</code>: 结束点对齐（底端对齐）<br><code>center</code>: 居中对齐<br><code>space-between</code>: 两端对齐<br><code>space-around</code>: 环绕对齐<br><strong>注意：将内容（不管是几行）当成是一个内容来看待，在盒子内一起排列</strong></p>
 
                 
 
