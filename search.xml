@@ -4,8 +4,35 @@
   
     
     <entry>
+      <title><![CDATA[AJAX写法总结]]></title>
+      <url>http://yoursite.com/2016/01/19/AJAX01/</url>
+      <content type="html"><![CDATA[<h2 id="1-原生AJAX"><a href="#1-原生AJAX" class="headerlink" title="1.原生AJAX"></a>1.原生AJAX</h2><p>所有的库、框架中的AJAX方法都是基于原生AJAX封装的，虽然我们在实际工作中会更多地利用这些封装好的方法进行方便使用，但是我们也应该了解其底层是怎么工作的。</p>
+<pre><code>   var ajax=new XMLHttpRequest();
+   ajax.open(&apos;GET&apos;,&apos;请求的网址&apos;,是否异步); //构造AJAX请求
+   ajax.onreadystatechange=function(){ //当AJAX引擎状态产生改变时，执行相应的函数
+//判断AJAX引擎的状态是否就绪 （ajax.readyState==4）同时必须判断服务器的响应数据是否正常(ajax.status==200)
+       if(ajax.readyState==4 &amp;&amp; ajax.status==200){
+           console.log(ajax.responseText);//接收响应回来的数据 ajax.responseText
+        }
+   }
+   ajax.send(); //发送AJAX请求
+</code></pre><h2 id="2-基于jQuery的AJAX请求"><a href="#2-基于jQuery的AJAX请求" class="headerlink" title="2.基于jQuery的AJAX请求"></a>2.基于jQuery的AJAX请求</h2><p>jQuery中封装的AJAX请求，常用的主要是<code>$.get()</code>、<code>$.post()</code>、<code>$.ajax()</code>三种，前两者是比较简化的AJAX的get以及post的方法，第三种可填写参数比较多，如果涉及到ajax跨域请求，需要使用第三种方法。</p>
+<pre><code>$.get(&apos;请求的网址,可以拼接参数&apos;,function(data){});
+$.post(&apos;请求的网址&apos;,{传递的参数列表,JSON格式},function(data){});
+$.ajax({
+    &quot;url&quot;:&quot;请求的网址&quot;,
+    &quot;type&quot;:&quot;get&quot;,
+    &quot;dataType&quot;:&quot;html&quot;,
+    &quot;success&quot;:function(data){
+        //成功以后调用的语句块
+    }
+});
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[CSS3中Flex伸缩布局的属性简介]]></title>
-      <url>http://yoursite.com/2015/05/26/css3-01/</url>
+      <url>http://yoursite.com/2015/12/26/css3-01/</url>
       <content type="html"><![CDATA[<h2 id="1-flexbox"><a href="#1-flexbox" class="headerlink" title="1.flexbox"></a>1.flexbox</h2><blockquote>
 <p>flexbox是CSS3中经过几年制定后推出的最新的弹性式布局方式，它解决了传统布局方式中难以解决的“垂直居中”等痛点，同时还非常灵活，可用性强，在进行移动端响应式布局时很适合使用。</p>
 </blockquote>
@@ -20,7 +47,7 @@
     
     <entry>
       <title><![CDATA[HTML5中input标签的新类型]]></title>
-      <url>http://yoursite.com/2015/05/16/HTML01/</url>
+      <url>http://yoursite.com/2015/11/16/HTML01/</url>
       <content type="html"><![CDATA[<h3 id="1-color"><a href="#1-color" class="headerlink" title="1.color"></a>1.color</h3><p>生成一个拾色器</p>
 <h3 id="2-Date"><a href="#2-Date" class="headerlink" title="2.Date"></a>2.Date</h3><p>将输入框变成日期输入框</p>
 <h3 id="3-datetime-local"><a href="#3-datetime-local" class="headerlink" title="3.datetime-local"></a>3.datetime-local</h3><p>日期及时间输入框</p>
@@ -44,7 +71,7 @@
     
     <entry>
       <title><![CDATA[使用mongoose对mongoDB数据库进行增删改查操作]]></title>
-      <url>http://yoursite.com/2015/04/27/NodeJs04/</url>
+      <url>http://yoursite.com/2015/10/27/NodeJs04/</url>
       <content type="html"><![CDATA[<h2 id="1-增加数据"><a href="#1-增加数据" class="headerlink" title="1.增加数据"></a>1.增加数据</h2><pre><code>var data=new adminModel();
 data.username=username;
 data.password=password;
@@ -65,7 +92,7 @@ data.save(function(){});
     
     <entry>
       <title><![CDATA[浏览器中Javascript引擎解读代码的步骤]]></title>
-      <url>http://yoursite.com/2015/04/15/JS03/</url>
+      <url>http://yoursite.com/2015/10/15/JS03/</url>
       <content type="html"><![CDATA[<p><strong>1.</strong>根据一些关键字来找东西（<code>var</code>、<code>function</code>），找到后存到<code>仓库</code>里面去（属于JS的预解析工作）。<br>找东西的规则：</p>
 <blockquote>
 <p>a. 如果是变量，就直接先赋值undefined；如果是函数块，就直接保存函数块<br> b. 如果变量和函数名重名，则保留函数块<br> c. 若函数块同名，后读取的覆盖先读取的</p>
@@ -76,7 +103,7 @@ data.save(function(){});
     
     <entry>
       <title><![CDATA[使用mongoose向数据库添加数据三部曲]]></title>
-      <url>http://yoursite.com/2015/03/29/NodeJs03/</url>
+      <url>http://yoursite.com/2015/09/29/NodeJs03/</url>
       <content type="html"><![CDATA[<h2 id="1-连接数据库"><a href="#1-连接数据库" class="headerlink" title="1.连接数据库"></a>1.连接数据库</h2><p>使用mongoose连接数据库的前提条件是：</p>
 <ol>
 <li>mongo数据库已经运行。</li>
@@ -112,7 +139,7 @@ instance1.save(function(err){
     
     <entry>
       <title><![CDATA[对JavaScript中一些概念的理解（二）]]></title>
-      <url>http://yoursite.com/2015/03/13/JS02/</url>
+      <url>http://yoursite.com/2015/09/13/JS02/</url>
       <content type="html"><![CDATA[<h2 id="1-匿名函数"><a href="#1-匿名函数" class="headerlink" title="1.匿名函数"></a>1.匿名函数</h2><p>只有<code>function(){}</code>没有名称标识符的就是匿名函数，优点是书写简单便捷，缺点是因为在内存栈中没有有意义的函数名，所以调试困难，另外就是没有函数名，就缺乏一个对该段代码的描述，降低了一定的可读性。</p>
 <h2 id="2-回调函数"><a href="#2-回调函数" class="headerlink" title="2.回调函数"></a>2.回调函数</h2><p>回调函数是指传一个函数指针作为参数传到另一个函数中，另一个函数会在需要时执行这个函数的一种方式。</p>
 <h2 id="3-闭包"><a href="#3-闭包" class="headerlink" title="3.闭包"></a>3.闭包</h2><p><strong>闭包就是一种私有化变量的方法</strong>，比如：函数中嵌套函数，内部的函数可以使用外部函数的参数或变量，并且参数或变量不会被js垃圾回收机制收回。</p>
@@ -127,7 +154,7 @@ instance1.save(function(err){
     
     <entry>
       <title><![CDATA[对JavaScript中一些概念的理解（一）]]></title>
-      <url>http://yoursite.com/2015/02/27/JS01/</url>
+      <url>http://yoursite.com/2015/08/27/JS01/</url>
       <content type="html"><![CDATA[<h2 id="1-对面向对象的理解"><a href="#1-对面向对象的理解" class="headerlink" title="1.对面向对象的理解"></a>1.对面向对象的理解</h2><p> 首先，对象是对实际事物的一个抽象，它包括了属性和方法两个概念，比如对于一个人来说，他的属性有姓名、身高、年龄等等，方法有吃饭，走路，跑步等等。对于万物都可以看作一个对象。</p>
 <p> 在编程中主要分为<code>面向过程(pop)</code>和<code>面向对象(oop)</code>两大类，pop主要重视做事的过程，oop是关注参与者和他们的行为，形象一点说，比如我们在编写一段选项卡功能时，pop就是针对这一选项卡的功能来针对性地写代码，oop则是编写这一个选项卡对象，在编写难度上oop更高一些，但是它的特点在于可以复用代码，适合于模块化编写，一个页面中有多个选项卡都可以使用这一个对象，并为其增加个性化设置，而pop则需要根据不同选项卡进行多次代码编写，这也就是oop的好处。</p>
 <h2 id="2-json"><a href="#2-json" class="headerlink" title="2.json"></a>2.json</h2><p>json是js对象表示法，它的内容以键值对的方式存在，它的主要用途在于存储和交换信息，我们前端工作中主要利用json字符串与后台服务器数据库进行数据交换，它的优点在于它是轻量级文本数据交换格式，可被多种程序语言解读，比XML更小更快更易解析，也天生是一个js对象。</p>
@@ -142,7 +169,7 @@ instance1.save(function(err){
     
     <entry>
       <title><![CDATA[NodeJs中的Buffer类]]></title>
-      <url>http://yoursite.com/2015/02/16/NodeJs02/</url>
+      <url>http://yoursite.com/2015/08/16/NodeJs02/</url>
       <content type="html"><![CDATA[<h3 id="1-Buffer-是什么"><a href="#1-Buffer-是什么" class="headerlink" title="1 Buffer 是什么?"></a>1 Buffer 是什么?</h3><p>所谓缓冲区Buffer，就是 “临时存贮区” 的意思，是暂时存放输入输出数据的一段内存。</p>
 <p>JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作。</p>
 <h3 id="2-Buffer-怎样用？"><a href="#2-Buffer-怎样用？" class="headerlink" title="2 Buffer 怎样用？"></a>2 Buffer 怎样用？</h3><p>Buffer的形式类似于数组，具有下标，长度等特性</p>
@@ -156,7 +183,7 @@ instance1.save(function(err){
     
     <entry>
       <title><![CDATA[npm与nrm的一些基础操作命令]]></title>
-      <url>http://yoursite.com/2015/02/02/NodeJs01/</url>
+      <url>http://yoursite.com/2015/08/02/NodeJs01/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>工欲善其事，必先利其器，要顺利使用NodeJs的各种模块包，我们就必须熟悉npm及其换源工具nrm的操作指令</p>
 </blockquote>
@@ -170,7 +197,7 @@ instance1.save(function(err){
     
     <entry>
       <title><![CDATA[Hello World!]]></title>
-      <url>http://yoursite.com/2015/01/29/hello/</url>
+      <url>http://yoursite.com/2015/07/29/hello/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>“起初,神创造天地”“地是空虚混沌，渊面黑暗； 神的灵运行在水面上”“神说：“要有光。”就有了光”“神看光是好的，就把光暗分开了”“神称光为“昼”，称暗为“夜”。有晚上，有早晨，这是头一日”(创1:1-1:5)。</p>
 </blockquote>
@@ -182,16 +209,16 @@ instance1.save(function(err){
   
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yoursite.com/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！<br>我搭建这个博客的目的在于记录我在学习编程技术过程中的收获、体会和总结，并分享给大家，如果我的文章对大家有一丝的帮助，我不胜荣幸。当然，偶尔也分享生活^.^</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yoursite.com/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
