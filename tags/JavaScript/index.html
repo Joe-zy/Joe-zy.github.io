@@ -7,7 +7,7 @@
 
     
 
-    <title>JavaScript | 朱越的个人博客</title>
+    <title>javascript | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
     
     
@@ -171,7 +171,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/技术/">
-                    技术 <span class="right">10 篇</span></a>
+                    技术 <span class="right">11 篇</span></a>
                 </a>
             </li>
 
@@ -179,7 +179,7 @@
 
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/技术/前端/">
-                    前端 <span class="right">6 篇</span></a>
+                    前端 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
@@ -242,7 +242,7 @@
         
 
         
-            <a class="breadcrumb" href="/tags/JavaScript/">JavaScript</a>
+            <a class="breadcrumb" href="/tags/javascript/">javascript</a>
         
     </div>
 </nav>
@@ -251,22 +251,10 @@
 
     <div class="collection mt-0">
         
-            <a href="/2015/10/15/JS03/" class="collection-item grey-text text-darken-1">
-                <time datetime="2015-10-15T10:04:10.000Z">2015-10-15</time>
+            <a href="/2016/02/23/JS04/" class="collection-item grey-text text-darken-1">
+                <time datetime="2016-02-23T10:34:05.000Z">2016-02-23</time>
                 <span>&nbsp;&nbsp;&nbsp;</span>
-                浏览器中Javascript引擎解读代码的步骤
-            </a>
-        
-            <a href="/2015/09/13/JS02/" class="collection-item grey-text text-darken-1">
-                <time datetime="2015-09-13T09:03:16.000Z">2015-09-13</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                对JavaScript中一些概念的理解（二）
-            </a>
-        
-            <a href="/2015/08/27/JS01/" class="collection-item grey-text text-darken-1">
-                <time datetime="2015-08-27T06:02:29.000Z">2015-08-27</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                对JavaScript中一些概念的理解（一）
+                关于js中call(), apply(), bind()简单的解释
             </a>
         
     </div>
@@ -548,6 +536,41 @@
                         });
                         str += "</ul>";
                         $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
+            $resultContent.innerHTML = str;
                     });
                 }
             });

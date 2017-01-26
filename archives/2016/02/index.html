@@ -7,17 +7,13 @@
 
     
 
-    <title>AJAX写法总结 | 朱越的个人博客</title>
+    <title>归档：2016/2 | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
-    
-    <meta name="description" content="1.原生AJAX所有的库、框架中的AJAX方法都是基于原生AJAX封装的，虽然我们在实际工作中会更多地利用这些封装好的方法进行方便使用，但是我们也应该了解其底层是怎么工作的。
-   var ajax=new XMLHttpRequest();
-   ajax.open(&amp;apos;GET&amp;apos;">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="AJAX写法总结"/>
+    
     <meta property="og:site_name" content="Joe-zy&#39;s Blog"/>
 
     
@@ -238,132 +234,40 @@
     <!--主体开始-->
     <main>
         <div class="container main-container">
-    <nav class="page-nav hide-on-small-only">
+    
+
+<nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（分类目录）</span>
-        
-            
-    
-    
-    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/前端/">前端</a>
-
-
+        <span class="breadcrumb">当前位置（归档）</span>
         
 
         
     </div>
 </nav>
 
-<article>
-    <div class="card">
-        <div class="card-content">
-            
-
-            <div class="article-title">
-                
-    
-        <h1>AJAX写法总结</h1>
-    
 
 
-            </div>
-            <time class="pink-link-context" datetime="2016-01-19T05:06:21.000Z"><a href="/2016/01/19/AJAX01/">2016-01-19</a></time>
-
-            <span id="busuanzi_container_page_pv" class="read-times-container">
-    <i class="fa fa-eye"></i>
-    <span id="busuanzi_value_page_pv"></span>
-</span>
-
-            
-    <div class="tags-row">
+    <ul class="collapsible mt-0" data-collapsible="accordion">
         
-            <a href="/tags/AJAX/" class="chip pink lighten-1">AJAX</a>
         
-            <a href="/tags/数据交换/" class="chip pink lighten-1">数据交换</a>
+            <li>
+                <div class="collapsible-header active">
+                    <i class="fa fa-archive"></i>2016
+                </div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        
+                            <a href="/2016/02/23/JS04/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2016-02-23T10:34:05.000Z">2016-02-23</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                关于js中call(), apply(), bind()简单的解释
+                            </a>
+                        
+                    </div>
+                </div>
+            </li>
         
-    </div>
-
-
-            <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-原生AJAX"><span class="section table-of-contents-text">1.原生AJAX</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-基于jQuery的AJAX请求"><span class="section table-of-contents-text">2.基于jQuery的AJAX请求</span></a></li></ol>
-</div>
-
-
-            <div class="entry pink-link-context">
-                <h2 id="1-原生AJAX"><a href="#1-原生AJAX" class="headerlink" title="1.原生AJAX"></a>1.原生AJAX</h2><p>所有的库、框架中的AJAX方法都是基于原生AJAX封装的，虽然我们在实际工作中会更多地利用这些封装好的方法进行方便使用，但是我们也应该了解其底层是怎么工作的。</p>
-<pre><code>   var ajax=new XMLHttpRequest();
-   ajax.open(&apos;GET&apos;,&apos;请求的网址&apos;,是否异步); //构造AJAX请求
-   ajax.onreadystatechange=function(){ //当AJAX引擎状态产生改变时，执行相应的函数
-//判断AJAX引擎的状态是否就绪 （ajax.readyState==4）同时必须判断服务器的响应数据是否正常(ajax.status==200)
-       if(ajax.readyState==4 &amp;&amp; ajax.status==200){
-           console.log(ajax.responseText);//接收响应回来的数据 ajax.responseText
-        }
-   }
-   ajax.send(); //发送AJAX请求
-</code></pre><h2 id="2-基于jQuery的AJAX请求"><a href="#2-基于jQuery的AJAX请求" class="headerlink" title="2.基于jQuery的AJAX请求"></a>2.基于jQuery的AJAX请求</h2><p>jQuery中封装的AJAX请求，常用的主要是<code>$.get()</code>、<code>$.post()</code>、<code>$.ajax()</code>三种，前两者是比较简化的AJAX的get以及post的方法，第三种可填写参数比较多，如果涉及到ajax跨域请求，需要使用第三种方法。</p>
-<pre><code>$.get(&apos;请求的网址,可以拼接参数&apos;,function(data){});
-$.post(&apos;请求的网址&apos;,{传递的参数列表,JSON格式},function(data){});
-$.ajax({
-    &quot;url&quot;:&quot;请求的网址&quot;,
-    &quot;type&quot;:&quot;get&quot;,
-    &quot;dataType&quot;:&quot;html&quot;,
-    &quot;success&quot;:function(data){
-        //成功以后调用的语句块
-    }
-});
-</code></pre>
-                
-<p class="pink-link-context">
-    <a href="/2016/02/23/JS04/" rel="next" title="关于js中call(), apply(), bind()简单的解释">
-    上一篇：关于js中call(), apply(), bind()简单的解释
-  </a>
-</p>
-
-
-
-<p class="pink-link-context">
-    <a href="/2015/12/26/css3-01/" rel="next" title="CSS3中Flex伸缩布局的属性简介">
-    下一篇：CSS3中Flex伸缩布局的属性简介
-  </a>
-</p>
-
-
-            </div>
-			
-        </div>
-    </div>
-</article>
-
-
-
-
-    <section id="comment">
-        <div class="card">
-            <div class="card-content">
-                <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2016/01/19/AJAX01/" data-title="AJAX写法总结" data-url="http://yoursite.com/2016/01/19/AJAX01/"></div>
-
-                <script type="text/javascript">
-                    console.log(document.querySelector('.ds-thread'));
-                    var duoshuoQuery = {
-                        short_name: 'joe-zy'
-                    };
-                    (function() {
-                        var ds = document.createElement('script');
-                        ds.type = 'text/javascript';
-                        ds.async = true;
-                        ds.src = (document.location.protocol == 'https:'
-                            ? 'https:'
-                            : 'http:') + '//static.duoshuo.com/embed.js';
-                        ds.charset = 'UTF-8';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-                    })();
-                </script>
-                <!-- Duoshuo Comment END -->
-            </div>
-        </div>
-    </section>
-
+    </ul>
 
 
 </div>

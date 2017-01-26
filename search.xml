@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title><![CDATA[关于js中call(), apply(), bind()简单的解释]]></title>
+      <url>http://yoursite.com/2016/02/23/JS04/</url>
+      <content type="html"><![CDATA[<h2 id="1-call"><a href="#1-call" class="headerlink" title="1.call()"></a>1.call()</h2><pre><code>var obj = {&quot;num&quot;:2};
+var addToThis = function(a,b,c){
+    return this.num + a + b + c;                    
+};
+
+var result = addToThis.call(obj,1,2,3);
+
+console.log(result);
+// 2 + 1 + 2 + 3
+//8
+</code></pre><p>对于上面的例子，call()方法让对象obj使用了addToThis方法，一般格式为 fun.call(thisArg, arg1, arg2 …..) ，意思就是说让thisArg可以使用fun方法，后面的arg1，arg2…就是传入fun方法的参数。</p>
+<h2 id="2-apply"><a href="#2-apply" class="headerlink" title="2.apply()"></a>2.apply()</h2><pre><code>var obj = {&quot;num&quot;:2};
+var addToThis = function(a,b,c){
+    return this.num + a + b + c;                    
+};
+
+var array = [1,2,3];
+
+var result = addToThis.apply(obj,array);
+
+console.log(result);
+// 2 + 1 + 2 + 3
+//8
+</code></pre><p>apply()方法和call()方法达成的效果一样，只不过传入其中的参数略有不同 fun.apply(obj,[arg1,arg2….]) ，只有两个参数，第二个参数为数组，用来存储需要传入fun方法的参数</p>
+<h2 id="3-bind"><a href="#3-bind" class="headerlink" title="3.bind()"></a>3.bind()</h2><pre><code>var obj = {&quot;num&quot;:2};
+var addToThis = function(a,b,c){
+    return this.num + a + b + c;                    
+};
+
+var result = addToThis.bind(obj);
+console.log(result(1,2,3));
+//8
+</code></pre><p>bind()方法会产生一个新的函数，函数中的this关键字已经被赋过值了。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[AJAX写法总结]]></title>
       <url>http://yoursite.com/2016/01/19/AJAX01/</url>
       <content type="html"><![CDATA[<h2 id="1-原生AJAX"><a href="#1-原生AJAX" class="headerlink" title="1.原生AJAX"></a>1.原生AJAX</h2><p>所有的库、框架中的AJAX方法都是基于原生AJAX封装的，虽然我们在实际工作中会更多地利用这些封装好的方法进行方便使用，但是我们也应该了解其底层是怎么工作的。</p>
