@@ -7,13 +7,16 @@
 
     
 
-    <title>归档 | 朱越的个人博客</title>
+    <title>用JS打开新窗口，防止被浏览器阻止的方法 | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="1.需求相信做web前端或者使用JS的朋友都会遇到需要在新窗口打开页面的情况，现在浏览器大都具有弹出窗口拦截功能，所以传统的window.open()不再那么好用了。借鉴于网上查到的方法和我个人的实践，把弹出新窗口的方法给大伙都介绍一下。
+2.方法一使用原生JavaScript的window.ope">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="用JS打开新窗口，防止被浏览器阻止的方法"/>
     <meta property="og:site_name" content="Joe-zy&#39;s Blog"/>
 
     
@@ -234,123 +237,112 @@
     <!--主体开始-->
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/前端/">前端</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>用JS打开新窗口，防止被浏览器阻止的方法</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2016-04-17T13:09:31.000Z"><a href="/2016/04/17/jQuery01/">2016-04-17</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/Javascript/" class="chip pink lighten-1">Javascript</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2016
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2016/04/17/jQuery01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-04-17T13:09:31.000Z">2016-04-17</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                用JS打开新窗口，防止被浏览器阻止的方法
-                            </a>
-                        
-                            <a href="/2016/02/23/JS04/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-02-23T10:34:05.000Z">2016-02-23</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                关于js中call(), apply(), bind()简单的解释
-                            </a>
-                        
-                            <a href="/2016/01/19/AJAX01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-01-19T05:06:21.000Z">2016-01-19</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                AJAX写法总结
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/jQuery技巧/" class="chip pink lighten-1">jQuery技巧</a>
         
-            <li>
-                <div class="collapsible-header ">
-                    <i class="fa fa-archive"></i>2015
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2015/12/26/css3-01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-12-26T02:54:53.000Z">2015-12-26</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                CSS3中Flex伸缩布局的属性简介
-                            </a>
-                        
-                            <a href="/2015/11/16/HTML01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-11-16T06:49:19.000Z">2015-11-16</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                HTML5中input标签的新类型
-                            </a>
-                        
-                            <a href="/2015/10/27/NodeJs04/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-10-27T06:08:29.000Z">2015-10-27</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                使用mongoose对mongoDB数据库进行增删改查操作
-                            </a>
-                        
-                            <a href="/2015/10/15/JS03/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-10-15T10:04:10.000Z">2015-10-15</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                浏览器中Javascript引擎解读代码的步骤
-                            </a>
-                        
-                            <a href="/2015/09/29/NodeJs03/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-09-29T04:57:26.000Z">2015-09-29</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                使用mongoose向数据库添加数据三部曲
-                            </a>
-                        
-                            <a href="/2015/09/13/JS02/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-09-13T09:03:16.000Z">2015-09-13</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                对JavaScript中一些概念的理解（二）
-                            </a>
-                        
-                            <a href="/2015/08/27/JS01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-27T06:02:29.000Z">2015-08-27</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                对JavaScript中一些概念的理解（一）
-                            </a>
-                        
-                            <a href="/2015/08/16/NodeJs02/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-16T11:09:35.000Z">2015-08-16</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                NodeJs中的Buffer类
-                            </a>
-                        
-                            <a href="/2015/08/02/NodeJs01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-02T11:28:21.000Z">2015-08-02</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                npm与nrm的一些基础操作命令
-                            </a>
-                        
-                            <a href="/2015/07/29/hello/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-07-29T03:16:12.000Z">2015-07-29</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World!
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-需求"><span class="section table-of-contents-text">1.需求</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-方法一"><span class="section table-of-contents-text">2.方法一</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#3-方法二"><span class="section table-of-contents-text">3.方法二</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#4-方法三"><span class="section table-of-contents-text">4.方法三</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h2 id="1-需求"><a href="#1-需求" class="headerlink" title="1.需求"></a>1.需求</h2><p>相信做web前端或者使用JS的朋友都会遇到需要在新窗口打开页面的情况，现在浏览器大都具有弹出窗口拦截功能，所以传统的window.open()不再那么好用了。借鉴于网上查到的方法和我个人的实践，把弹出新窗口的方法给大伙都介绍一下。</p>
+<h2 id="2-方法一"><a href="#2-方法一" class="headerlink" title="2.方法一"></a>2.方法一</h2><p>使用原生<code>JavaScript</code>的<code>window.open()</code>方法（大部分情况下会被浏览自阻止）</p>
+<h2 id="3-方法二"><a href="#3-方法二" class="headerlink" title="3.方法二"></a>3.方法二</h2><p>模拟<code>表单(form)</code>提交，原理是指定表单的action为想要打开的URL地址，target设置为”_blank”不过模拟表单提交的方法经很多网友反映说也会被阻止</p>
+<h2 id="4-方法三"><a href="#4-方法三" class="headerlink" title="4.方法三"></a>4.方法三</h2><p>模拟超链接a标签被点击，用jQuery的写法如下，注意最后openLink[0]是模拟的原生DOM对象被点击的（使用Jquery对象的话没反应）</p>
+<pre><code>var openLink = $(&quot;&quot;);  
+openLink.attr(&apos;href&apos;, &apos;URL地址&apos;);  
+openLink[0].click(); 
+</code></pre>
+                
+
+
+<p class="pink-link-context">
+    <a href="/2016/02/23/JS04/" rel="next" title="关于js中call(), apply(), bind()简单的解释">
+    下一篇：关于js中call(), apply(), bind()简单的解释
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/04/17/jQuery01/" data-title="用JS打开新窗口，防止被浏览器阻止的方法" data-url="http://yoursite.com/2016/04/17/jQuery01/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'joe-zy'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>

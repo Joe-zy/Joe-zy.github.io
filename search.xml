@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[用JS打开新窗口，防止被浏览器阻止的方法]]></title>
+      <url>http://yoursite.com/2016/04/17/jQuery01/</url>
+      <content type="html"><![CDATA[<h2 id="1-需求"><a href="#1-需求" class="headerlink" title="1.需求"></a>1.需求</h2><p>相信做web前端或者使用JS的朋友都会遇到需要在新窗口打开页面的情况，现在浏览器大都具有弹出窗口拦截功能，所以传统的window.open()不再那么好用了。借鉴于网上查到的方法和我个人的实践，把弹出新窗口的方法给大伙都介绍一下。</p>
+<h2 id="2-方法一"><a href="#2-方法一" class="headerlink" title="2.方法一"></a>2.方法一</h2><p>使用原生<code>JavaScript</code>的<code>window.open()</code>方法（大部分情况下会被浏览自阻止）</p>
+<h2 id="3-方法二"><a href="#3-方法二" class="headerlink" title="3.方法二"></a>3.方法二</h2><p>模拟<code>表单(form)</code>提交，原理是指定表单的action为想要打开的URL地址，target设置为”_blank”不过模拟表单提交的方法经很多网友反映说也会被阻止</p>
+<h2 id="4-方法三"><a href="#4-方法三" class="headerlink" title="4.方法三"></a>4.方法三</h2><p>模拟超链接a标签被点击，用jQuery的写法如下，注意最后openLink[0]是模拟的原生DOM对象被点击的（使用Jquery对象的话没反应）</p>
+<pre><code>var openLink = $(&quot;&quot;);  
+openLink.attr(&apos;href&apos;, &apos;URL地址&apos;);  
+openLink[0].click(); 
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于js中call(), apply(), bind()简单的解释]]></title>
       <url>http://yoursite.com/2016/02/23/JS04/</url>
       <content type="html"><![CDATA[<h2 id="1-call"><a href="#1-call" class="headerlink" title="1.call()"></a>1.call()</h2><pre><code>var obj = {&quot;num&quot;:2};

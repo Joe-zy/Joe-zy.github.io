@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-26T10:36:41.597Z</updated>
+  <updated>2017-02-01T13:14:04.072Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用JS打开新窗口，防止被浏览器阻止的方法</title>
+    <link href="http://yoursite.com/2016/04/17/jQuery01/"/>
+    <id>http://yoursite.com/2016/04/17/jQuery01/</id>
+    <published>2016-04-17T13:09:31.000Z</published>
+    <updated>2017-02-01T13:14:04.072Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-需求&quot;&gt;&lt;a href=&quot;#1-需求&quot; class=&quot;headerlink&quot; title=&quot;1.需求&quot;&gt;&lt;/a&gt;1.需求&lt;/h2&gt;&lt;p&gt;相信做web前端或者使用JS的朋友都会遇到需要在新窗口打开页面的情况，现在浏览器大都具有弹出窗口拦截功能，所以传统的wind
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="jQuery技巧" scheme="http://yoursite.com/tags/jQuery%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>关于js中call(), apply(), bind()简单的解释</title>
