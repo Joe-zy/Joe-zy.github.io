@@ -7,19 +7,18 @@
 
     
 
-    <title>浏览器中Javascript引擎解读代码的步骤 | 朱越的个人博客</title>
+    <title>javascript的类型检测 | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
     
-    <meta name="description" content="1.根据一些关键字来找东西（var、function），找到后存到仓库里面去（属于JS的预解析工作）。找东西的规则：
-
-a. 如果是变量，就直接先赋值undefined；如果是函数块，就直接保存函数块 b. 如果变量和函数名重名，则保留函数块 c. 若函数块同名，后读取的覆盖先读取的
-
-2.逐行执行">
+    <meta name="description" content="typeof适合基本类型及function检测，遇到null失效。
+typeof 45 ;// 返回字符串 &amp;quot;numebr&amp;quot;
+typeof true;// 返回字符串 &amp;quot;boolean&amp;quot;
+typeof function;// 返回字符串 &amp;quot;funct">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="浏览器中Javascript引擎解读代码的步骤"/>
+    <meta property="og:title" content="javascript的类型检测"/>
     <meta property="og:site_name" content="Joe-zy&#39;s Blog"/>
 
     
@@ -264,12 +263,12 @@ a. 如果是变量，就直接先赋值undefined；如果是函数块，就直�
             <div class="article-title">
                 
     
-        <h1>浏览器中Javascript引擎解读代码的步骤</h1>
+        <h1>javascript的类型检测</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2015-10-15T10:04:10.000Z"><a href="/2015/10/15/JS03/">2015-10-15</a></time>
+            <time class="pink-link-context" datetime="2016-05-19T13:47:44.000Z"><a href="/2016/05/19/JS05/">2016-05-19</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -279,37 +278,44 @@ a. 如果是变量，就直接先赋值undefined；如果是函数块，就直�
             
     <div class="tags-row">
         
-            <a href="/tags/JavaScript/" class="chip pink lighten-1">JavaScript</a>
+            <a href="/tags/javascript/" class="chip pink lighten-1">javascript</a>
         
-            <a href="/tags/JS引擎/" class="chip pink lighten-1">JS引擎</a>
+            <a href="/tags/类型检测/" class="chip pink lighten-1">类型检测</a>
         
     </div>
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#typeof"><span class="section table-of-contents-text">typeof</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#instanceof"><span class="section table-of-contents-text">instanceof</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Object-prototype-toString"><span class="section table-of-contents-text">Object.prototype.toString</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <p><strong>1.</strong>根据一些关键字来找东西（<code>var</code>、<code>function</code>），找到后存到<code>仓库</code>里面去（属于JS的预解析工作）。<br>找东西的规则：</p>
-<blockquote>
-<p>a. 如果是变量，就直接先赋值undefined；如果是函数块，就直接保存函数块<br> b. 如果变量和函数名重名，则保留函数块<br> c. 若函数块同名，后读取的覆盖先读取的</p>
-</blockquote>
-<p><strong>2.</strong>逐行执行代码，从上到下，从仓库中寻找变量及函数，如果代码中有赋值的部分，就会对仓库中已存的进行对应的赋值。</p>
-
+                <h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>适合基本类型及function检测，遇到null失效。</p>
+<pre><code>typeof 45 ;// 返回字符串 &quot;numebr&quot;
+typeof true;// 返回字符串 &quot;boolean&quot;
+typeof function;// 返回字符串 &quot;function&quot;
+typeof(undefined);// 返回字符串&quot;undefined&quot;
+typeof new Object();// 返回字符串&quot;object&quot;
+typeof [4,3];//返回字符串&quot;object&quot;
+typeof NaN;//返回字符串&quot;number&quot;
+typeof null;//返回字符串&quot;object&quot;
+</code></pre><h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>适合自定义对象，也可以用来检测原生对象，在不同iframe和window间检测时失效。</p>
+<pre><code>[2,5] instanceof Array === true
+new Object() instanceof Array === false
+</code></pre><h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString"></a>Object.prototype.toString</h2><p>通过{}.toString 拿到，适合内置对象和基元类型，遇到null和undefined失效（IE678等返回[object Object]）。</p>
+<pre><code>Object.prototype.toString.apply([]); === &quot;[object Array]&quot;;
+Object.prototype.toString.apply(function(){}); === &quot;[object Function]&quot;;
+Object.prototype.toString.apply(null); === &quot;[object Null]&quot;
+Object.prototype.toString.apply(undefined); === &quot;[object Undefined]&quot;;
+//IE6/7/8 Object.prototype.toString.apply(null) 返回 &quot;[object Object]&quot;
+</code></pre>
                 
-<p class="pink-link-context">
-    <a href="/2015/10/27/NodeJs04/" rel="next" title="使用mongoose对mongoDB数据库进行增删改查操作">
-    上一篇：使用mongoose对mongoDB数据库进行增删改查操作
-  </a>
-</p>
-
 
 
 <p class="pink-link-context">
-    <a href="/2015/09/29/NodeJs03/" rel="next" title="使用mongoose向数据库添加数据三部曲">
-    下一篇：使用mongoose向数据库添加数据三部曲
+    <a href="/2016/04/17/jQuery01/" rel="next" title="用JS打开新窗口，防止被浏览器阻止的方法">
+    下一篇：用JS打开新窗口，防止被浏览器阻止的方法
   </a>
 </p>
 
@@ -327,7 +333,7 @@ a. 如果是变量，就直接先赋值undefined；如果是函数块，就直�
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2015/10/15/JS03/" data-title="浏览器中Javascript引擎解读代码的步骤" data-url="http://yoursite.com/2015/10/15/JS03/"></div>
+                <div class="ds-thread" data-thread-key="2016/05/19/JS05/" data-title="javascript的类型检测" data-url="http://yoursite.com/2016/05/19/JS05/"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));

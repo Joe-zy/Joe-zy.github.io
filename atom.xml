@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-01T13:14:04.072Z</updated>
+  <updated>2017-02-04T13:52:04.702Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript的类型检测</title>
+    <link href="http://yoursite.com/2016/05/19/JS05/"/>
+    <id>http://yoursite.com/2016/05/19/JS05/</id>
+    <published>2016-05-19T13:47:44.000Z</published>
+    <updated>2017-02-04T13:52:04.702Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;typeof&quot;&gt;&lt;a href=&quot;#typeof&quot; class=&quot;headerlink&quot; title=&quot;typeof&quot;&gt;&lt;/a&gt;typeof&lt;/h2&gt;&lt;p&gt;适合基本类型及function检测，遇到null失效。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;typeof 45 ;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="类型检测" scheme="http://yoursite.com/tags/%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>用JS打开新窗口，防止被浏览器阻止的方法</title>

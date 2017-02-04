@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[javascript的类型检测]]></title>
+      <url>http://yoursite.com/2016/05/19/JS05/</url>
+      <content type="html"><![CDATA[<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>适合基本类型及function检测，遇到null失效。</p>
+<pre><code>typeof 45 ;// 返回字符串 &quot;numebr&quot;
+typeof true;// 返回字符串 &quot;boolean&quot;
+typeof function;// 返回字符串 &quot;function&quot;
+typeof(undefined);// 返回字符串&quot;undefined&quot;
+typeof new Object();// 返回字符串&quot;object&quot;
+typeof [4,3];//返回字符串&quot;object&quot;
+typeof NaN;//返回字符串&quot;number&quot;
+typeof null;//返回字符串&quot;object&quot;
+</code></pre><h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>适合自定义对象，也可以用来检测原生对象，在不同iframe和window间检测时失效。</p>
+<pre><code>[2,5] instanceof Array === true
+new Object() instanceof Array === false
+</code></pre><h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString"></a>Object.prototype.toString</h2><p>通过{}.toString 拿到，适合内置对象和基元类型，遇到null和undefined失效（IE678等返回[object Object]）。</p>
+<pre><code>Object.prototype.toString.apply([]); === &quot;[object Array]&quot;;
+Object.prototype.toString.apply(function(){}); === &quot;[object Function]&quot;;
+Object.prototype.toString.apply(null); === &quot;[object Null]&quot;
+Object.prototype.toString.apply(undefined); === &quot;[object Undefined]&quot;;
+//IE6/7/8 Object.prototype.toString.apply(null) 返回 &quot;[object Object]&quot;
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[用JS打开新窗口，防止被浏览器阻止的方法]]></title>
       <url>http://yoursite.com/2016/04/17/jQuery01/</url>
       <content type="html"><![CDATA[<h2 id="1-需求"><a href="#1-需求" class="headerlink" title="1.需求"></a>1.需求</h2><p>相信做web前端或者使用JS的朋友都会遇到需要在新窗口打开页面的情况，现在浏览器大都具有弹出窗口拦截功能，所以传统的window.open()不再那么好用了。借鉴于网上查到的方法和我个人的实践，把弹出新窗口的方法给大伙都介绍一下。</p>
