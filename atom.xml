@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-04T13:52:04.702Z</updated>
+  <updated>2017-02-08T15:19:00.166Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WOW.js在页面滚动时展现CSS3动画效果</title>
+    <link href="http://yoursite.com/2016/06/18/jQuery02/"/>
+    <id>http://yoursite.com/2016/06/18/jQuery02/</id>
+    <published>2016-06-18T15:04:46.000Z</published>
+    <updated>2017-02-08T15:19:00.166Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-需求&quot;&gt;&lt;a href=&quot;#1-需求&quot; class=&quot;headerlink&quot; title=&quot;1.需求&quot;&gt;&lt;/a&gt;1.需求&lt;/h2&gt;&lt;p&gt;功能强大的CSS3动画&lt;code&gt;animation&lt;/code&gt;允许我们为页面中的元素添加许多炫酷的动态效果，但是通过an
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="动画插件" scheme="http://yoursite.com/tags/%E5%8A%A8%E7%94%BB%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript的类型检测</title>

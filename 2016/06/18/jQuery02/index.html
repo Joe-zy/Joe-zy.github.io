@@ -7,13 +7,15 @@
 
     
 
-    <title>生活 | 朱越的个人博客</title>
+    <title>WOW.js在页面滚动时展现CSS3动画效果 | 朱越的个人博客</title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="1.需求功能强大的CSS3动画animation允许我们为页面中的元素添加许多炫酷的动态效果，但是通过animation属性添加的动画，在页面刷新时就会执行，有时候我们的需求时当页面滚动到元素显示的位置才执行该动画，这时候就是这款简洁的基于原生Javascript编写的插件WOW.js登场的时候了。">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="WOW.js在页面滚动时展现CSS3动画效果"/>
     <meta property="og:site_name" content="Joe-zy&#39;s Blog"/>
 
     
@@ -234,30 +236,121 @@
     <!--主体开始-->
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/前端/">前端</a>
+
 
         
-            <a class="breadcrumb" href="/categories/生活/">生活</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>WOW.js在页面滚动时展现CSS3动画效果</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2016-06-18T15:04:46.000Z"><a href="/2016/06/18/jQuery02/">2016-06-18</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2015/07/29/hello/" class="collection-item grey-text text-darken-1">
-                <time datetime="2015-07-29T03:16:12.000Z">2015-07-29</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Hello World!
-            </a>
+            <a href="/tags/Javascript/" class="chip pink lighten-1">Javascript</a>
+        
+            <a href="/tags/动画插件/" class="chip pink lighten-1">动画插件</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-需求"><span class="section table-of-contents-text">1.需求</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-使用方法"><span class="section table-of-contents-text">2.使用方法</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h2 id="1-需求"><a href="#1-需求" class="headerlink" title="1.需求"></a>1.需求</h2><p>功能强大的CSS3动画<code>animation</code>允许我们为页面中的元素添加许多炫酷的动态效果，但是通过animation属性添加的动画，在页面刷新时就会执行，有时候我们的需求时当页面滚动到元素显示的位置才执行该动画，这时候就是这款简洁的基于原生Javascript编写的插件<code>WOW.js</code>登场的时候了。</p>
+<h2 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2.使用方法"></a>2.使用方法</h2><p>1.引入文件</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/animate.min.css&quot;&gt;
+&lt;script src=&quot;js/wow.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</code></pre><p>2.HTML</p>
+<pre><code>&lt;div class=&quot;wow slideInLeft&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wow slideInRight&quot;&gt;&lt;/div&gt;
+</code></pre><p>3.Javascript  </p>
+<pre><code>var wow = new WOW({
+    boxClass: &apos;wow&apos;,//需要为执行的元素添加的类名
+    animateClass: &apos;animated&apos;,//相关的动画库
+    offset: 0,//距离可视区域多少时开始执行动画
+    mobile: true,//是否在移动设备上执行动画
+    live: true//异步加载内容是否有效
+});
+wow.init();
+</code></pre>
+                
+
+
+<p class="pink-link-context">
+    <a href="/2016/05/19/JS05/" rel="next" title="javascript的类型检测">
+    下一篇：javascript的类型检测
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/06/18/jQuery02/" data-title="WOW.js在页面滚动时展现CSS3动画效果" data-url="http://yoursite.com/2016/06/18/jQuery02/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'joe-zy'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
