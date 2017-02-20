@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-08T15:19:00.166Z</updated>
+  <updated>2017-02-20T10:20:12.756Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css3属性计算函数calc()简介</title>
+    <link href="http://yoursite.com/2016/08/20/css3-02/"/>
+    <id>http://yoursite.com/2016/08/20/css3-02/</id>
+    <published>2016-08-20T10:15:13.000Z</published>
+    <updated>2017-02-20T10:20:12.756Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;p&gt;平时在制作页面的时候，总会碰到有的元素是100%的宽度。众所周知，如果元素宽度为100%时，其自身不带其他盒模型属性设置还好
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS3" scheme="http://yoursite.com/tags/CSS3/"/>
+    
+      <category term="calc" scheme="http://yoursite.com/tags/calc/"/>
+    
+  </entry>
   
   <entry>
     <title>WOW.js在页面滚动时展现CSS3动画效果</title>

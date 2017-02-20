@@ -4,6 +4,26 @@
   
     
     <entry>
+      <title><![CDATA[css3属性计算函数calc()简介]]></title>
+      <url>http://yoursite.com/2016/08/20/css3-02/</url>
+      <content type="html"><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>平时在制作页面的时候，总会碰到有的元素是100%的宽度。众所周知，如果元素宽度为100%时，其自身不带其他盒模型属性设置还好，要是有别的，那将导致盒子撑破。比如说，有一个边框，或者说有<code>margin</code>和<code>padding</code>，这些都会让你的盒子撑破。我们换句话来说，如果你的元素宽度是100%时，只要你在元素中添加了<code>border</code>,<code>padding</code>,<code>margin</code>任何一值，都将会把元素盒子撑破（标准模式下，除IE怪异模式）。这样一来就会相当的麻烦，平时我们碰到这样的现象时，也是相当的谨慎，有时甚至无法解决，只能通过改变结构来实现。就算你通过繁琐的方法实现了，但有于浏览器的兼容性而导致最终效果不一致。虽然CSS3属性中的<code>box-sizing</code>在一定程度上解决这样的问题，其实<code>calc()</code>函数功能实现上面的效果来得更简单。</p>
+<p><code>calc()</code>从字面我们可以把他理解为一个函数function。其实calc是英文单词calculate(计算)的缩写，是css3的一个新增的功能，用来指定元素的长度。比如说，你可以使用calc()给元素的border、margin、pading、font-size和width等属性设置动态值。为何说是动态值呢?因为我们使用的表达式来得到的值。不过calc()最大的好处就是用在流式布局上，可以通过calc()计算得到元素的宽度。</p>
+<h2 id="2-实例"><a href="#2-实例" class="headerlink" title="2.实例"></a>2.实例</h2><p>在less下calc()可以这样应用</p>
+<pre><code>.class{
+         width:e(&apos;calc(100% - 20px)&apos;);
+     }
+     .class{
+         height:calc(~&quot;100% - 50px&quot;);
+     }
+     .class {
+       @cap: 50px;
+       height: calc(~&quot;100% - @{cap}&quot;);
+     }
+</code></pre><p> calc()可以使用数学运算中的简单加（+）、减（-）、乘（*）和除（/）来解决问题，而且还可以根据单位如px,em,rem和百分比来转化计算</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[WOW.js在页面滚动时展现CSS3动画效果]]></title>
       <url>http://yoursite.com/2016/06/18/jQuery02/</url>
       <content type="html"><![CDATA[<h2 id="1-需求"><a href="#1-需求" class="headerlink" title="1.需求"></a>1.需求</h2><p>功能强大的CSS3动画<code>animation</code>允许我们为页面中的元素添加许多炫酷的动态效果，但是通过animation属性添加的动画，在页面刷新时就会执行，有时候我们的需求时当页面滚动到元素显示的位置才执行该动画，这时候就是这款简洁的基于原生Javascript编写的插件<code>WOW.js</code>登场的时候了。</p>
@@ -307,16 +327,16 @@ instance1.save(function(err){
   
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yoursite.com/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是朱越。欢迎来到我的个人网站！<br>我搭建这个博客的目的在于记录我在学习编程技术过程中的收获、体会和总结，并分享给大家，如果我的文章对大家有一丝的帮助，我不胜荣幸。当然，偶尔也分享生活^.^</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yoursite.com/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
