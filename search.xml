@@ -4,6 +4,28 @@
   
     
     <entry>
+      <title><![CDATA[gulp构建工具中的autoprefixer插件]]></title>
+      <url>http://yoursite.com/2016/09/22/gulp01/</url>
+      <content type="html"><![CDATA[<h2 id="1-autoprefixer简介"><a href="#1-autoprefixer简介" class="headerlink" title="1.autoprefixer简介"></a>1.autoprefixer简介</h2><p>我们在使用很多新的CSS3属性时，想必已经充分体验到了它的优越性，但是同样也有“一些烦恼”，那就是虽然在我们最新的各版本浏览器中已经很好地支持了新的属性，但是为了兼容一些版本较落后的浏览器，我们仍需要使用兼容性的写法，就是在属性前加上浏览器内核，例如<code>-webkit-align-content:center;</code>,如果兼容多种浏览器，还需要加不同的各种内核。这样既影响了我们编写样式的思路，也减慢了开发效率。那么有没有一款插件能解决这个开发的痛点呢？正是这款基于gulp自动构建工具的<code>gulp-autoprefixer</code>，有了它我们可以用正常的方式写CSS3属性，然后它将自动为我们添加合适的兼容性写法。那让我们看看它是如何使用的吧。</p>
+<h2 id="2-autoprefixer使用"><a href="#2-autoprefixer使用" class="headerlink" title="2.autoprefixer使用"></a>2.autoprefixer使用</h2><p>2.1 安装</p>
+<pre><code>$ npm install --save-dev gulp-autoprefixer
+</code></pre><p>2.2 在gulp配置文件<code>gulpfile.js</code>中引入</p>
+<pre><code>const gulp = require(&apos;gulp&apos;);
+const autoprefixer = require(&apos;gulp-autoprefixer&apos;);
+
+gulp.task(&apos;default&apos;, () =&gt;
+    gulp.src(&apos;src/app.css&apos;)
+        .pipe(autoprefixer({
+            browsers: [&apos;last 2 versions&apos;],
+            cascade: false
+        }))
+        .pipe(gulp.dest(&apos;dist&apos;))
+);
+</code></pre><p>2.3 配置简介<br>我们在对插件进行配置时，主要是配置其<code>browsers</code>属性，这个属性的值是你打算做兼容性的浏览器版本，我们可以在其官方说明文档中看到许多种类的浏览器版本<a href="https://github.com/ai/browserslist#queries" target="_blank" rel="external">完整属性传送门</a>。我个人建议是如果要做完整的兼容，可以在此项填写<code>&quot;&gt;0.1%&quot;</code>,如果是做近年来浏览器版本的兼容，可以填写<code>&quot;&gt;1%&quot;</code>。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[css3属性计算函数calc()简介]]></title>
       <url>http://yoursite.com/2016/08/20/css3-02/</url>
       <content type="html"><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>平时在制作页面的时候，总会碰到有的元素是100%的宽度。众所周知，如果元素宽度为100%时，其自身不带其他盒模型属性设置还好，要是有别的，那将导致盒子撑破。比如说，有一个边框，或者说有<code>margin</code>和<code>padding</code>，这些都会让你的盒子撑破。我们换句话来说，如果你的元素宽度是100%时，只要你在元素中添加了<code>border</code>,<code>padding</code>,<code>margin</code>任何一值，都将会把元素盒子撑破（标准模式下，除IE怪异模式）。这样一来就会相当的麻烦，平时我们碰到这样的现象时，也是相当的谨慎，有时甚至无法解决，只能通过改变结构来实现。就算你通过繁琐的方法实现了，但有于浏览器的兼容性而导致最终效果不一致。虽然CSS3属性中的<code>box-sizing</code>在一定程度上解决这样的问题，其实<code>calc()</code>函数功能实现上面的效果来得更简单。</p>
