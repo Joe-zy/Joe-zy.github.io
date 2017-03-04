@@ -40,6 +40,31 @@
   </entry>
   
   <entry>
+    <title>微信小程序简单介绍</title>
+    <link href="http://yoursite.com/2017/01/10/miniapp1/"/>
+    <id>http://yoursite.com/2017/01/10/miniapp1/</id>
+    <published>2017-01-10T14:56:32.000Z</published>
+    <updated>2017-01-10T15:53:12.080Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-什么是小程序&quot;&gt;&lt;a href=&quot;#1-什么是小程序&quot; class=&quot;headerlink&quot; title=&quot;1.什么是小程序&quot;&gt;&lt;/a&gt;1.什么是小程序&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;基于微信平台的一种无需下载安装即可使用的手机应用，根据微信平台上提
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="简介" scheme="http://yoursite.com/tags/%E7%AE%80%E4%BB%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>css3属性计算函数calc()简介</title>
     <link href="http://yoursite.com/2016/12/20/css3-02/"/>
     <id>http://yoursite.com/2016/12/20/css3-02/</id>

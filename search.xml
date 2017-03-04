@@ -26,6 +26,25 @@ gulp.task(&apos;default&apos;, () =&gt;
     </entry>
     
     <entry>
+      <title><![CDATA[微信小程序简单介绍]]></title>
+      <url>http://yoursite.com/2017/01/10/miniapp1/</url>
+      <content type="html"><![CDATA[<h2 id="1-什么是小程序"><a href="#1-什么是小程序" class="headerlink" title="1.什么是小程序"></a>1.什么是小程序</h2><blockquote>
+<p>基于微信平台的一种无需下载安装即可使用的手机应用，根据微信平台上提供的api，可以实现很多app的常见功能，从目前体验来看使用效果与原生区别不大</p>
+</blockquote>
+<h2 id="2-如何获得和使用小程序？"><a href="#2-如何获得和使用小程序？" class="headerlink" title="2.如何获得和使用小程序？"></a>2.如何获得和使用小程序？</h2><p><strong>首先要把手机微信更新到最新的版本</strong><br>当我们还没有使用过小程序时，小程序在微信中是没有明显的入口的，目前我所知道的有6个获得小程序的途径:</p>
+<ol>
+<li>通过好友和微信群分享小程序，但是不能通过朋友圈分享<img src="http://p1.bpimg.com/1949/48bf47a643356cdc.png" alt="好友与群分享"></li>
+<li>在微信搜索框中输入准确的小程序名字可以搜索到小程序<br><img src="http://i1.piimg.com/1949/a6c0fa8ff8fff53c.png" alt="搜索"></li>
+<li>线下扫码直接进入小程序</li>
+<li>通过绑定了小程序的公众号入口进入小程序</li>
+<li>张小龙称小程序就像公众号一样，不会专门提供类似于appstore的小程序商城，但是目前已有第一家第三方的小程序商城，<a href="https://minapp.com" target="_blank" rel="external">知晓程序</a>， 推荐实用小程序：<code>草料二维码</code>、<code>极简汇率</code><img src="http://p1.bpimg.com/1949/2fa04447e63fa45d.png" alt="二维码"></li>
+<li>你所有使用过的小程序都可以在<code>发现-小程序</code>中打开<img src="http://i1.piimg.com/1949/9e2c5733e7be580a.png" alt="发现-小程序"><img src="http://i1.piimg.com/1949/96510d9372b36ff6.png" alt="小程序列表"></li>
+</ol>
+<h2 id="3-小程序的前景"><a href="#3-小程序的前景" class="headerlink" title="3.小程序的前景"></a>3.小程序的前景</h2><p>目前还不能预测小程序的前景一定会怎么样，但是在微信公众号刚推出时同样也没人预料到微信公众号会像现在这样被如此广泛地使用。微信平台有巨大的用户群体，不管小程序未来情况如何，都将会有大量公司企业着手小程序的开发，特别是现有公众号的机构，小程序可以作为公众号功能的一个良好拓展。<br>对于我们前端开发人员来说，小程序也是多了一个工作的方向与机会。<img src="http://p1.bqimg.com/1949/5992fc210b4a83b4.png" alt="Markdown">该图来源于微信平台官方的小程序教程，可以看到小程序页面是由由同路径下同名的四个不同后缀文件的组成，如：<code>index.js</code>、<code>index.wxml</code>、<code>index.wxss</code>、<code>index.json</code>。其核心仍然是我们最常用的javascript,同时wxml、wxss也非常类似于html与css，所以我们可以花费相比其他岗位更少的学习成本就能熟悉与掌握微信小程序的开发。<br>对小程序开发有兴趣的朋友可以从<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/index.html" target="_blank" rel="external">官方说明</a>开始一步一步进行学习。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[css3属性计算函数calc()简介]]></title>
       <url>http://yoursite.com/2016/12/20/css3-02/</url>
       <content type="html"><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>平时在制作页面的时候，总会碰到有的元素是100%的宽度。众所周知，如果元素宽度为100%时，其自身不带其他盒模型属性设置还好，要是有别的，那将导致盒子撑破。比如说，有一个边框，或者说有<code>margin</code>和<code>padding</code>，这些都会让你的盒子撑破。我们换句话来说，如果你的元素宽度是100%时，只要你在元素中添加了<code>border</code>,<code>padding</code>,<code>margin</code>任何一值，都将会把元素盒子撑破（标准模式下，除IE怪异模式）。这样一来就会相当的麻烦，平时我们碰到这样的现象时，也是相当的谨慎，有时甚至无法解决，只能通过改变结构来实现。就算你通过繁琐的方法实现了，但有于浏览器的兼容性而导致最终效果不一致。虽然CSS3属性中的<code>box-sizing</code>在一定程度上解决这样的问题，其实<code>calc()</code>函数功能实现上面的效果来得更简单。</p>
