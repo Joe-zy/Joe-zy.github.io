@@ -4,6 +4,95 @@
   
     
     <entry>
+      <title><![CDATA[Redux中的三个重要概念理解]]></title>
+      <url>http://yoursite.com/2017/03/06/react02/</url>
+      <content type="html"><![CDATA[<h2 id="0-redux"><a href="#0-redux" class="headerlink" title="0.redux"></a>0.redux</h2><p><code>redux</code>就是用来统一管理项目中的状态（state）。state它可以是前后端的各种数据，也可以是UI上的一些信息。简单来说，它就是个对象，包含了项目中可能用于改变的一些信息。<br><code>react-redux</code>是<code>redux</code>和<code>react</code>结合的一个框架，我们可以说是用来专门管理自己数据业务（或逻辑状态）的一个框架。<br><code>redux</code>主要关注以下三个关键点：<strong>Actions</strong>，<strong>Reducers</strong>，<strong>Store</strong></p>
+<h2 id="1-Actions"><a href="#1-Actions" class="headerlink" title="1.Actions"></a>1.Actions</h2><pre><code>function changeTable(index) {
+        return { type: &quot;channgTable&quot;, data:index }
+}
+</code></pre><p>以上例子就是一个action，我们不用纠结它定义个一个函数形式还是其它，最终它就是一个对象。包含type、data或者还有其他元素的对象。</p>
+<p>action就是用来告诉我们的状态管理器需要做什么样的一种操作。拿以上例子来说，就是为了做一个切换table的操作，那么我就定义了这么一个action。data就是你做这个操作需要处理的一些数据等。</p>
+<h2 id="2-Reducers"><a href="#2-Reducers" class="headerlink" title="2.Reducers"></a>2.Reducers</h2><pre><code>const reducer = function(state={&quot;tableIndex&quot;:0}, action={}) {
+        switch(action.type){
+              //当发出type为changeTable的action对state的操作
+              case &quot;changeTable&quot;:
+                    let backup = state;
+                    backup[&quot;tableIndex&quot;] = action.data;
+                    return Object.assign({}, state,backup);
+              default :
+                    return Object.assign({}, state);
+        }
+}
+</code></pre><p>以上例子就是一个reducer，它是一个会对不同action做出不同操作的函数。</p>
+<p>如当我发出切换table的action时，就是把我们之前定义action的data传递给state下的tableIndex变量，用来告诉state，我要切换table的序号。</p>
+<p>在没有任何操作情况下，返回初始的state。不直接去改变state的值，而是返回一个新的对象，保持state的唯一性。</p>
+<h2 id="3-Store"><a href="#3-Store" class="headerlink" title="3.Store"></a>3.Store</h2><pre><code>var store = createStore(reducer);
+</code></pre><p>这就是Store，用来管理state的单一对象。其中有三个方法：<br>1.<code>store.getState()</code>：获取state，如上，经过reducer已经返回了一个新的state，那么就可以用该函数获取；<br>2.<code>store.dispatch(action)</code>：发出操作，更新state。action内有操作的类型，就可以出发不同的对state的更新；<br>3.<code>store.subscribe(listener)</code>：监听变化，当state发生更新时，就可以在这个函数的回调中监听。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用vue-cli构建一个Vue项目]]></title>
+      <url>http://yoursite.com/2017/02/19/vue01/</url>
+      <content type="html"><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p><code>Vue-cli</code>是Vue官方提供的脚手架工具，可以通过它快速构建一个基于webpack的vue项目，并实现简单的单页面应用。以下是它的安装流程</p>
+<h2 id="2-安装流程"><a href="#2-安装流程" class="headerlink" title="2.安装流程"></a>2.安装流程</h2><p>1.在确定你已安装好node.js,webpack之后，输入：</p>
+<pre><code>npm install vue-cli -g
+</code></pre><p>以全局安装<code>Vue-cli</code>脚手架</p>
+<p>2.在目录中选择一个文件夹存放该vue工程，进入该路径后输入：</p>
+<pre><code>vue init webpack app
+</code></pre><p><strong>注意</strong>：“app”是你的项目的名称，可以任意输入，但是不要使用中文。之后将会有一段安装之前的配置选项。</p>
+<pre><code>$ vue init webpack exprice --------------------- 这个是安装vue脚手架的命令
+This will install Vue 2.x version of the template. ---------------------这里说明将要创建一个vue 2.x版本的项目
+For Vue 1.x use: vue init webpack#1.0 exprice
+? Project name (exprice) ---------------------项目名称
+? Project name exprice
+? Project description (A Vue.js project) ---------------------项目描述
+? Project description A Vue.js project
+? Author Datura --------------------- 项目创建者
+? Author Datura
+? Vue build (Use arrow keys)
+? Vue build standalone
+? Install vue-router? (Y/n) --------------------- 是否安装Vue路由，也就是以后是spa（单页面应用需要的模块）
+? Install vue-router? Yes
+? Use ESLint to lint your code? (Y/n) Y 
+? Use ESLint to lint your code? Yes
+? Setup unit tests with Karma + Mocha? (Y/n)
+? Setup unit tests with Karma + Mocha? Yes
+? Setup e2e tests with Nightwatch? (Y/n)
+? Setup e2e tests with Nightwatch? Yes
+vue-cli · Generated &quot;exprice&quot;.
+To get started: --------------------- 这里说明如何启动这个服务
+cd exprice
+npm install
+npm run dev
+</code></pre><p>3.完毕后进入你的工程目录，安装项目依赖</p>
+<pre><code>npm install
+</code></pre><p>建议使用cnpm进行安装，减少等待时间。</p>
+<p>4.进行spa开发，需要安装vue的路由模块<code>vue-router</code>和网络请求模块<code>vue-resource</code>，输入</p>
+<pre><code>npm install vue-router vue-resource --save
+</code></pre><p>5.启动项目，输入</p>
+<pre><code>npm run dev
+</code></pre><p>若安装成功将看到一个欢迎页面。此时证明你已将一个vue项目构完毕，可以进行进一步的开发了！</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用React官方脚手架快速搭建React开发环境]]></title>
+      <url>http://yoursite.com/2017/01/18/react01/</url>
+      <content type="html"><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>使用React开发项目之前搭建一个适合的开发环境是必不可少的，比如webpack帮助我们按需打包模块文件，各种预处理语言提高我们开发效率，babel使我们可以使用最前沿的ES6/7语法等等。现在有很多成熟的脚手架供我们选择，今天介绍的这款脚手架是React官方推出的脚手架create-react-app，搭建速度很快且步骤十分简便，值得一试。</p>
+<h2 id="2-安装步骤"><a href="#2-安装步骤" class="headerlink" title="2.安装步骤"></a>2.安装步骤</h2><p>2.1 全局安装</p>
+<pre><code>npm install -g create-react-app
+</code></pre><p>2.2 创建React项目</p>
+<pre><code>create-react-app my-app
+cd my-app／
+</code></pre><p>2.3 使用npm命令启动开发服务器</p>
+<pre><code>npm start
+</code></pre><p>2.4 开始开发<br>    访问<code>http://localhost:3000/</code>查看你的页面</p>
+<p>2.5 生产环境<br>如果你需要将项目部署到生产环境，运行<code>npm run build</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[gulp构建工具中的autoprefixer插件]]></title>
       <url>http://yoursite.com/2017/01/12/gulp01/</url>
       <content type="html"><![CDATA[<h2 id="1-autoprefixer简介"><a href="#1-autoprefixer简介" class="headerlink" title="1.autoprefixer简介"></a>1.autoprefixer简介</h2><p>我们在使用很多新的CSS3属性时，想必已经充分体验到了它的优越性，但是同样也有“一些烦恼”，那就是虽然在我们最新的各版本浏览器中已经很好地支持了新的属性，但是为了兼容一些版本较落后的浏览器，我们仍需要使用兼容性的写法，就是在属性前加上浏览器内核，例如<code>-webkit-align-content:center;</code>,如果兼容多种浏览器，还需要加不同的各种内核。这样既影响了我们编写样式的思路，也减慢了开发效率。那么有没有一款插件能解决这个开发的痛点呢？正是这款基于gulp自动构建工具的<code>gulp-autoprefixer</code>，有了它我们可以用正常的方式写CSS3属性，然后它将自动为我们添加合适的兼容性写法。那让我们看看它是如何使用的吧。</p>
